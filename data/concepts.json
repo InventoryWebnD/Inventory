@@ -1,0 +1,1286 @@
+[
+  {
+    "id": "html-boilerplate",
+    "title": "Boilerplate",
+    "slug": "boilerplate",
+    "tech": "html",
+    "mdPath": "/content/html/boilerplate.md",
+    "summary": "Every HTML5 document starts from a standard skeleton called the boilerplate. It tells the browser what kind of document it is, sets the language, character encoding, and viewpor...",
+    "tags": [
+      "html",
+      "boilerplate"
+    ],
+    "keywords": [
+      "boilerplate",
+      "<!doctype",
+      "html>",
+      "declaration",
+      "<html>",
+      "root",
+      "element",
+      "lang"
+    ],
+    "category": "structure",
+    "estimatedTime": 7,
+    "related": [
+      "html-headings-and-paragraphs",
+      "html-tables"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-headings-and-paragraphs",
+    "title": "Headings & Paragraphs",
+    "slug": "headings-and-paragraphs",
+    "tech": "html",
+    "mdPath": "/content/html/headings-and-paragraphs.md",
+    "summary": "Headings and paragraphs are the backbone of textual content in HTML. Headings (<h1>–<h6>) create a hierarchical outline of a page, while paragraphs (<p>) group related sentences...",
+    "tags": [
+      "html",
+      "headings",
+      "paragraphs"
+    ],
+    "keywords": [
+      "headings",
+      "&",
+      "paragraphs",
+      "heading",
+      "levels",
+      "<h1>",
+      "<h6>",
+      "document"
+    ],
+    "category": "text",
+    "estimatedTime": 7,
+    "related": [
+      "html-boilerplate",
+      "html-lists"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-lists",
+    "title": "Lists",
+    "slug": "lists",
+    "tech": "html",
+    "mdPath": "/content/html/lists.md",
+    "summary": "Lists organize related items into a structured, scannable format. HTML provides three list types: unordered (bullets), ordered (numbered), and description lists (term/definition...",
+    "tags": [
+      "html",
+      "lists"
+    ],
+    "keywords": [
+      "lists",
+      "unordered",
+      "<ul>",
+      "list",
+      "items",
+      "<li>",
+      "ordered",
+      "<ol>"
+    ],
+    "category": "text",
+    "estimatedTime": 6,
+    "related": [
+      "html-headings-and-paragraphs",
+      "html-tables"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-tables",
+    "title": "Tables",
+    "slug": "tables",
+    "tech": "html",
+    "mdPath": "/content/html/tables.md",
+    "summary": "HTML tables display tabular data — information organized into rows and columns, such as schedules, pricing charts, or reports. Tables should be reserved for genuine tabular data...",
+    "tags": [
+      "html",
+      "tables"
+    ],
+    "keywords": [
+      "tables",
+      "table",
+      "structure:",
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>",
+      "sections:"
+    ],
+    "category": "structure",
+    "estimatedTime": 6,
+    "related": [
+      "html-lists",
+      "html-media",
+      "html-boilerplate"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-media",
+    "title": "Media",
+    "slug": "media",
+    "tech": "html",
+    "mdPath": "/content/html/media.md",
+    "summary": "HTML supports embedding rich media directly into web pages: images, audio, and video, without relying on third-party plugins. Proper use of alt text, captions, and fallback cont...",
+    "tags": [
+      "html",
+      "media"
+    ],
+    "keywords": [
+      "media",
+      "images",
+      "<img>",
+      "responsive",
+      "images:",
+      "srcset",
+      "sizes",
+      "image"
+    ],
+    "category": "media",
+    "estimatedTime": 7,
+    "related": [
+      "html-tables",
+      "html-buttons-and-inputs"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-buttons-and-inputs",
+    "title": "Buttons & Inputs",
+    "slug": "buttons-and-inputs",
+    "tech": "html",
+    "mdPath": "/content/html/buttons-and-inputs.md",
+    "summary": "Buttons and inputs are the primary controls users interact with to take action or provide data — clicking, typing, selecting, and submitting. HTML5 offers a wide variety of <inp...",
+    "tags": [
+      "html",
+      "buttons",
+      "inputs"
+    ],
+    "keywords": [
+      "buttons",
+      "&",
+      "inputs",
+      "<button>",
+      "element",
+      "type",
+      "attribute",
+      "<input>"
+    ],
+    "category": "forms",
+    "estimatedTime": 8,
+    "related": [
+      "html-media",
+      "html-forms"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "html-forms",
+    "title": "Forms",
+    "slug": "forms",
+    "tech": "html",
+    "mdPath": "/content/html/forms.md",
+    "summary": "The <form> element is the container that ties inputs, buttons, and other controls together so users can submit data to a server (or to JavaScript). Forms handle grouping, valida...",
+    "tags": [
+      "html",
+      "forms"
+    ],
+    "keywords": [
+      "forms",
+      "<form>",
+      "element",
+      "core",
+      "attributes",
+      "action",
+      "method",
+      "grouping"
+    ],
+    "category": "forms",
+    "estimatedTime": 8,
+    "related": [
+      "html-buttons-and-inputs"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-types",
+    "title": "Types",
+    "slug": "types",
+    "tech": "css",
+    "mdPath": "/content/css/types.md",
+    "summary": "CSS can be applied in three ways: inline, internal, and external. Each has different scope, priority, and use cases.",
+    "tags": [
+      "css",
+      "types"
+    ],
+    "keywords": [
+      "types",
+      "inline",
+      "internal",
+      "external",
+      "cascade",
+      "specificity",
+      "type",
+      "!important"
+    ],
+    "category": "basics",
+    "estimatedTime": 3,
+    "related": [
+      "css-selectors",
+      "css-inheritance"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-selectors",
+    "title": "Selectors",
+    "slug": "selectors",
+    "tech": "css",
+    "mdPath": "/content/css/selectors.md",
+    "summary": "Selectors target HTML elements for styling. Understanding selector types and specificity (which rule wins when several apply) is core to writing predictable CSS.",
+    "tags": [
+      "css",
+      "selectors"
+    ],
+    "keywords": [
+      "selectors",
+      "universal",
+      "type",
+      "class",
+      "grouping",
+      "combinators",
+      "descendant",
+      "child"
+    ],
+    "category": "selectors",
+    "estimatedTime": 3,
+    "related": [
+      "css-types",
+      "css-inheritance",
+      "css-pseudo-selectors"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-inheritance",
+    "title": "Inheritance",
+    "slug": "inheritance",
+    "tech": "css",
+    "mdPath": "/content/css/inheritance.md",
+    "summary": "Inheritance lets certain CSS properties automatically pass from a parent element to its children, reducing repetition. Not all properties inherit by default — mostly text-relate...",
+    "tags": [
+      "css",
+      "inheritance"
+    ],
+    "keywords": [
+      "inheritance",
+      "inherited",
+      "non-inherited",
+      "properties",
+      "controlling",
+      "inheritance:",
+      "inherit",
+      "initial"
+    ],
+    "category": "basics",
+    "estimatedTime": 3,
+    "related": [
+      "css-selectors",
+      "css-box-model",
+      "css-types"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-box-model",
+    "title": "Box Model",
+    "slug": "box-model",
+    "tech": "css",
+    "mdPath": "/content/css/box-model.md",
+    "summary": "Every HTML element is rendered as a rectangular box made of content, padding, border, and margin. Understanding this model is essential for controlling spacing and sizing accura...",
+    "tags": [
+      "css",
+      "box",
+      "model"
+    ],
+    "keywords": [
+      "box",
+      "model",
+      "content",
+      "padding",
+      "border",
+      "margin",
+      "layers",
+      "box-sizing:"
+    ],
+    "category": "box-model",
+    "estimatedTime": 3,
+    "related": [
+      "css-inheritance",
+      "css-units"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-units",
+    "title": "Units",
+    "slug": "units",
+    "tech": "css",
+    "mdPath": "/content/css/units.md",
+    "summary": "CSS units define lengths, sizes, and proportions. They're split into absolute units (fixed size) and relative units (scale based on context, like parent font size or viewport).",
+    "tags": [
+      "css",
+      "units"
+    ],
+    "keywords": [
+      "units",
+      "absolute",
+      "units:",
+      "relative",
+      "viewport",
+      "vmin",
+      "vmax",
+      "unitless"
+    ],
+    "category": "box-model",
+    "estimatedTime": 3,
+    "related": [
+      "css-box-model",
+      "css-functions"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-functions",
+    "title": "Functions",
+    "slug": "functions",
+    "tech": "css",
+    "mdPath": "/content/css/functions.md",
+    "summary": "CSS functions let values be computed dynamically instead of hard-coded — performing math, choosing responsive values, or referencing variables. calc(), clamp(), min(), and max()...",
+    "tags": [
+      "css",
+      "functions"
+    ],
+    "keywords": [
+      "functions",
+      "calc",
+      "arithmetic",
+      "between",
+      "mixed",
+      "units",
+      "smallest",
+      "list"
+    ],
+    "category": "properties",
+    "estimatedTime": 3,
+    "related": [
+      "css-units",
+      "css-variables"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-variables",
+    "title": "Variables",
+    "slug": "variables",
+    "tech": "css",
+    "mdPath": "/content/css/variables.md",
+    "summary": "CSS custom properties (variables) let you store reusable values — colors, spacing, fonts — in one place and reference them throughout a stylesheet, making themes and maintenance...",
+    "tags": [
+      "css",
+      "variables"
+    ],
+    "keywords": [
+      "variables",
+      "declaring",
+      "custom",
+      "properties",
+      "--name:",
+      "value;",
+      "scope:",
+      ":root"
+    ],
+    "category": "properties",
+    "estimatedTime": 3,
+    "related": [
+      "css-functions",
+      "css-colour-and-background"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-colour-and-background",
+    "title": "Colour & Background",
+    "slug": "colour-and-background",
+    "tech": "css",
+    "mdPath": "/content/css/colour-and-background.md",
+    "summary": "CSS offers multiple color formats and a rich set of background properties for controlling fills, images, gradients, and positioning behind content.",
+    "tags": [
+      "css",
+      "colour",
+      "background"
+    ],
+    "keywords": [
+      "colour",
+      "&",
+      "background",
+      "color",
+      "formats:",
+      "keyword",
+      "/rgba",
+      "/hsla"
+    ],
+    "category": "styling",
+    "estimatedTime": 3,
+    "related": [
+      "css-variables",
+      "css-display-and-layout",
+      "css-typography"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-display-and-layout",
+    "title": "Display & Layout",
+    "slug": "display-and-layout",
+    "tech": "css",
+    "mdPath": "/content/css/display-and-layout.md",
+    "summary": "The display property determines how an element participates in the page's layout — whether it takes a full line, sits inline, or becomes a flex/grid container. It's the foundati...",
+    "tags": [
+      "css",
+      "display",
+      "layout"
+    ],
+    "keywords": [
+      "display",
+      "&",
+      "layout",
+      "display:",
+      "block",
+      "inline",
+      "inline-block",
+      "none"
+    ],
+    "category": "layout",
+    "estimatedTime": 3,
+    "related": [
+      "css-colour-and-background",
+      "css-flexbox",
+      "css-grid"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-flexbox",
+    "title": "Flexbox",
+    "slug": "flexbox",
+    "tech": "css",
+    "mdPath": "/content/css/flexbox.md",
+    "summary": "Flexbox is a one-dimensional layout system for arranging items in a row or column, distributing space, and aligning content — ideal for navbars, cards, and centering.",
+    "tags": [
+      "css",
+      "flexbox"
+    ],
+    "keywords": [
+      "flexbox",
+      "display:",
+      "flex",
+      "container",
+      "setup",
+      "main",
+      "axis",
+      "cross"
+    ],
+    "category": "layout",
+    "estimatedTime": 4,
+    "related": [
+      "css-display-and-layout",
+      "css-grid",
+      "css-positioning"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-grid",
+    "title": "Grid",
+    "slug": "grid",
+    "tech": "css",
+    "mdPath": "/content/css/grid.md",
+    "summary": "CSS Grid is a two-dimensional layout system that arranges items into rows and columns simultaneously, making it ideal for full page layouts and complex UI structures.",
+    "tags": [
+      "css",
+      "grid"
+    ],
+    "keywords": [
+      "grid",
+      "display:",
+      "container",
+      "setup",
+      "grid-template-columns",
+      "grid-template-rows",
+      "unit",
+      "repeat"
+    ],
+    "category": "layout",
+    "estimatedTime": 3,
+    "related": [
+      "css-flexbox",
+      "css-positioning",
+      "css-display-and-layout"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-positioning",
+    "title": "Positioning",
+    "slug": "positioning",
+    "tech": "css",
+    "mdPath": "/content/css/positioning.md",
+    "summary": "The position property controls how an element is placed relative to its normal position, its nearest positioned ancestor, or the viewport — enabling overlays, sticky headers, an...",
+    "tags": [
+      "css",
+      "positioning"
+    ],
+    "keywords": [
+      "positioning",
+      "position:",
+      "static",
+      "default",
+      "relative",
+      "absolute",
+      "fixed",
+      "sticky"
+    ],
+    "category": "layout",
+    "estimatedTime": 4,
+    "related": [
+      "css-grid",
+      "css-typography",
+      "css-display-and-layout"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-typography",
+    "title": "Typography",
+    "slug": "typography",
+    "tech": "css",
+    "mdPath": "/content/css/typography.md",
+    "summary": "Typography properties control how text looks and reads: font family, size, weight, spacing, and alignment — key to readability and visual hierarchy.",
+    "tags": [
+      "css",
+      "typography"
+    ],
+    "keywords": [
+      "typography",
+      "font-family",
+      "font",
+      "stacks",
+      "fonts",
+      "@font-face",
+      "font-size",
+      "font-weight"
+    ],
+    "category": "styling",
+    "estimatedTime": 3,
+    "related": [
+      "css-positioning",
+      "css-borders-and-effects",
+      "css-colour-and-background"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-borders-and-effects",
+    "title": "Borders & Effects",
+    "slug": "borders-and-effects",
+    "tech": "css",
+    "mdPath": "/content/css/borders-and-effects.md",
+    "summary": "Borders define an element's visible edge, while visual effects like shadows and object-fit shape how content and media appear inside their containers.",
+    "tags": [
+      "css",
+      "borders",
+      "effects"
+    ],
+    "keywords": [
+      "borders",
+      "&",
+      "effects",
+      "border",
+      "shorthand",
+      "longhand",
+      "border-width",
+      "border-style"
+    ],
+    "category": "styling",
+    "estimatedTime": 4,
+    "related": [
+      "css-typography",
+      "css-pseudo-selectors",
+      "css-colour-and-background"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-pseudo-selectors",
+    "title": "Pseudo Selectors",
+    "slug": "pseudo-selectors",
+    "tech": "css",
+    "mdPath": "/content/css/pseudo-selectors.md",
+    "summary": "Pseudo-classes select elements based on state or position (like :hover or :first-child), while pseudo-elements target a specific part of an element (like ::before or ::first-line).",
+    "tags": [
+      "css",
+      "pseudo",
+      "selectors"
+    ],
+    "keywords": [
+      "pseudo",
+      "selectors",
+      "pseudo-classes:",
+      ":hover",
+      ":focus",
+      ":active",
+      ":visited",
+      "structural"
+    ],
+    "category": "selectors",
+    "estimatedTime": 4,
+    "related": [
+      "css-borders-and-effects",
+      "css-responsiveness",
+      "css-selectors"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-responsiveness",
+    "title": "Responsiveness",
+    "slug": "responsiveness",
+    "tech": "css",
+    "mdPath": "/content/css/responsiveness.md",
+    "summary": "Responsive CSS makes layouts adapt gracefully across screen sizes and devices, primarily through media queries, flexible units, and fluid layout techniques.",
+    "tags": [
+      "css",
+      "responsiveness"
+    ],
+    "keywords": [
+      "responsiveness",
+      "mobile-first",
+      "desktop-first",
+      "approach",
+      "@media",
+      "queries:",
+      "min-width",
+      "max-width"
+    ],
+    "category": "responsive",
+    "estimatedTime": 4,
+    "related": [
+      "css-pseudo-selectors",
+      "css-transition-and-transform"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-transition-and-transform",
+    "title": "Transition & Transform",
+    "slug": "transition-and-transform",
+    "tech": "css",
+    "mdPath": "/content/css/transition-and-transform.md",
+    "summary": "Transitions animate property changes smoothly over time, while transforms let elements move, rotate, scale, or skew without affecting document flow — together they create polish...",
+    "tags": [
+      "css",
+      "transition",
+      "transform"
+    ],
+    "keywords": [
+      "transition",
+      "&",
+      "transform",
+      "transition-property",
+      "transition-duration",
+      "transition-timing-function",
+      "transition-delay",
+      "shorthand"
+    ],
+    "category": "animation",
+    "estimatedTime": 3,
+    "related": [
+      "css-responsiveness",
+      "css-animation-and-keyframes"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "css-animation-and-keyframes",
+    "title": "Animation & Keyframes",
+    "slug": "animation-and-keyframes",
+    "tech": "css",
+    "mdPath": "/content/css/animation-and-keyframes.md",
+    "summary": "CSS animations allow multi-step, looping, or complex motion sequences using @keyframes, going beyond what simple transitions can achieve (which only animate between two states).",
+    "tags": [
+      "css",
+      "animation",
+      "keyframes"
+    ],
+    "keywords": [
+      "animation",
+      "&",
+      "keyframes",
+      "@keyframes",
+      "rule",
+      "definition",
+      "animation-name",
+      "animation-duration"
+    ],
+    "category": "animation",
+    "estimatedTime": 4,
+    "related": [
+      "css-transition-and-transform"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-fundamentals",
+    "title": "Fundamentals",
+    "slug": "fundamentals",
+    "tech": "js",
+    "mdPath": "/content/js/fundamentals.md",
+    "summary": "JavaScript is the programming language of the web, enabling interactivity, logic, and dynamic behavior in browsers (and beyond, via Node.js). This chapter covers how JS code is ...",
+    "tags": [
+      "js",
+      "fundamentals"
+    ],
+    "keywords": [
+      "fundamentals",
+      "statements",
+      "expressions",
+      "comments",
+      "variable",
+      "declarations:",
+      "const",
+      "scope:"
+    ],
+    "category": "basics",
+    "estimatedTime": 6,
+    "related": [
+      "js-data-types",
+      "js-operators"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-data-types",
+    "title": "Data Types",
+    "slug": "data-types",
+    "tech": "js",
+    "mdPath": "/content/js/data-types.md",
+    "summary": "JavaScript has two categories of data types: primitive types (stored by value) and reference types (stored by reference). Understanding type coercion and equality checking is es...",
+    "tags": [
+      "js",
+      "data",
+      "types"
+    ],
+    "keywords": [
+      "data",
+      "types",
+      "primitive",
+      "types:",
+      "string",
+      "number",
+      "boolean",
+      "undefined"
+    ],
+    "category": "basics",
+    "estimatedTime": 5,
+    "related": [
+      "js-fundamentals",
+      "js-operators",
+      "js-control-structures"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-operators",
+    "title": "Operators",
+    "slug": "operators",
+    "tech": "js",
+    "mdPath": "/content/js/operators.md",
+    "summary": "Operators perform actions on values: arithmetic, comparison, logical, assignment, and more. ES6+ adds convenient operators like optional chaining and nullish coalescing.",
+    "tags": [
+      "js",
+      "operators"
+    ],
+    "keywords": [
+      "operators",
+      "arithmetic",
+      "assignment",
+      "including",
+      "compound",
+      "comparison",
+      "etc.",
+      "logical"
+    ],
+    "category": "basics",
+    "estimatedTime": 4,
+    "related": [
+      "js-data-types",
+      "js-control-structures",
+      "js-fundamentals"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-control-structures",
+    "title": "Control Structures",
+    "slug": "control-structures",
+    "tech": "js",
+    "mdPath": "/content/js/control-structures.md",
+    "summary": "Control structures direct the flow of execution — deciding which code runs and how many times, via conditionals and loops.",
+    "tags": [
+      "js",
+      "control",
+      "structures"
+    ],
+    "keywords": [
+      "control",
+      "structures",
+      "else",
+      "switch",
+      "loop",
+      "while",
+      "do...while",
+      "loops"
+    ],
+    "category": "basics",
+    "estimatedTime": 5,
+    "related": [
+      "js-operators",
+      "js-functions",
+      "js-fundamentals"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-functions",
+    "title": "Functions",
+    "slug": "functions",
+    "tech": "js",
+    "mdPath": "/content/js/functions.md",
+    "summary": "Functions are reusable blocks of logic. Modern JS adds arrow functions, default/rest parameters, and closures — a powerful mechanism where a function \"remembers\" variables from ...",
+    "tags": [
+      "js",
+      "functions"
+    ],
+    "keywords": [
+      "functions",
+      "function",
+      "declarations",
+      "expressions",
+      "arrow",
+      "parameters:",
+      "default",
+      "values"
+    ],
+    "category": "core",
+    "estimatedTime": 5,
+    "related": [
+      "js-control-structures",
+      "js-arrays",
+      "js-error-handling"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-arrays",
+    "title": "Arrays",
+    "slug": "arrays",
+    "tech": "js",
+    "mdPath": "/content/js/arrays.md",
+    "summary": "Arrays store ordered lists of values. ES6+ provides powerful functional methods (map, filter, reduce) for transforming array data without manual loops.",
+    "tags": [
+      "js",
+      "arrays"
+    ],
+    "keywords": [
+      "arrays",
+      "creating",
+      "accessing/modifying",
+      "elements",
+      "mutating",
+      "methods:",
+      "push",
+      "shift"
+    ],
+    "category": "data-structures",
+    "estimatedTime": 5,
+    "related": [
+      "js-functions",
+      "js-objects",
+      "js-strings"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-objects",
+    "title": "Objects",
+    "slug": "objects",
+    "tech": "js",
+    "mdPath": "/content/js/objects.md",
+    "summary": "Objects store data as key-value pairs and are the core building block for structuring complex data in JavaScript, alongside methods for creating, copying, and inspecting them.",
+    "tags": [
+      "js",
+      "objects"
+    ],
+    "keywords": [
+      "objects",
+      "object",
+      "literals",
+      "bracket",
+      "notation",
+      "adding/updating/deleting",
+      "properties",
+      "methods:"
+    ],
+    "category": "data-structures",
+    "estimatedTime": 5,
+    "related": [
+      "js-arrays",
+      "js-strings"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-strings",
+    "title": "Strings",
+    "slug": "strings",
+    "tech": "js",
+    "mdPath": "/content/js/strings.md",
+    "summary": "Strings represent text. Modern JS provides template literals for readable string building plus a rich set of methods for searching, transforming, and splitting text.",
+    "tags": [
+      "js",
+      "strings"
+    ],
+    "keywords": [
+      "strings",
+      "string",
+      "creation",
+      "quotes",
+      "template",
+      "literals",
+      "interpolation",
+      "case"
+    ],
+    "category": "data-structures",
+    "estimatedTime": 4,
+    "related": [
+      "js-objects",
+      "js-dom-introduction",
+      "js-arrays"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-dom-introduction",
+    "title": "DOM Introduction",
+    "slug": "dom-introduction",
+    "tech": "js",
+    "mdPath": "/content/js/dom-introduction.md",
+    "summary": "The DOM (Document Object Model) is a live tree representation of an HTML page that JavaScript can read and modify — enabling dynamic content, styling, and structure changes with...",
+    "tags": [
+      "js",
+      "dom",
+      "introduction"
+    ],
+    "keywords": [
+      "dom",
+      "introduction",
+      "selecting",
+      "elements:",
+      "getelementbyid",
+      "queryselector",
+      "queryselectorall",
+      "reading/modifying"
+    ],
+    "category": "dom",
+    "estimatedTime": 4,
+    "related": [
+      "js-strings",
+      "js-events",
+      "js-forms-and-inputs"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-events",
+    "title": "Events",
+    "slug": "events",
+    "tech": "js",
+    "mdPath": "/content/js/events.md",
+    "summary": "Events let JavaScript respond to user interactions (clicks, typing, scrolling) or browser actions (page load). Understanding event bubbling and delegation is key to writing effi...",
+    "tags": [
+      "js",
+      "events"
+    ],
+    "keywords": [
+      "events",
+      "adding/removing",
+      "listeners:",
+      "addeventlistener",
+      "removeeventlistener",
+      "common",
+      "event",
+      "types:"
+    ],
+    "category": "dom",
+    "estimatedTime": 5,
+    "related": [
+      "js-dom-introduction",
+      "js-forms-and-inputs"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-forms-and-inputs",
+    "title": "Forms & Inputs",
+    "slug": "forms-and-inputs",
+    "tech": "js",
+    "mdPath": "/content/js/forms-and-inputs.md",
+    "summary": "JavaScript can read, validate, and react to form input values in real time — essential for interactive forms, live validation, and custom submit handling.",
+    "tags": [
+      "js",
+      "forms",
+      "inputs"
+    ],
+    "keywords": [
+      "forms",
+      "&",
+      "inputs",
+      "accessing",
+      "form/input",
+      "values",
+      ".value",
+      ".checked"
+    ],
+    "category": "dom",
+    "estimatedTime": 4,
+    "related": [
+      "js-events",
+      "js-async-javascript",
+      "js-dom-introduction"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-async-javascript",
+    "title": "Async JavaScript",
+    "slug": "async-javascript",
+    "tech": "js",
+    "mdPath": "/content/js/async-javascript.md",
+    "summary": "JavaScript is single-threaded but handles time-consuming tasks (network requests, timers) asynchronously via the event loop, Promises, and the more readable async/await syntax b...",
+    "tags": [
+      "js",
+      "async",
+      "javascript"
+    ],
+    "keywords": [
+      "async",
+      "javascript",
+      "synchronous",
+      "asynchronous",
+      "execution",
+      "callbacks",
+      "callback",
+      "hell"
+    ],
+    "category": "async",
+    "estimatedTime": 6,
+    "related": [
+      "js-forms-and-inputs",
+      "js-json-and-data"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-json-and-data",
+    "title": "JSON & Data",
+    "slug": "json-and-data",
+    "tech": "js",
+    "mdPath": "/content/js/json-and-data.md",
+    "summary": "JSON (JavaScript Object Notation) is a lightweight, text-based data format used to exchange data between a client and server. JS provides built-in methods to convert between JSO...",
+    "tags": [
+      "js",
+      "json",
+      "data"
+    ],
+    "keywords": [
+      "json",
+      "&",
+      "data",
+      "syntax",
+      "rules",
+      "json.stringify",
+      "object",
+      "string"
+    ],
+    "category": "async",
+    "estimatedTime": 4,
+    "related": [
+      "js-async-javascript",
+      "js-error-handling"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-error-handling",
+    "title": "Error Handling",
+    "slug": "error-handling",
+    "tech": "js",
+    "mdPath": "/content/js/error-handling.md",
+    "summary": "Error handling lets a program gracefully respond to unexpected failures — invalid input, failed network requests, or bugs — instead of crashing entirely. JavaScript uses try/cat...",
+    "tags": [
+      "js",
+      "error",
+      "handling"
+    ],
+    "keywords": [
+      "error",
+      "handling",
+      "catch",
+      "finally",
+      "object",
+      "properties",
+      "message",
+      "name"
+    ],
+    "category": "core",
+    "estimatedTime": 5,
+    "related": [
+      "js-json-and-data",
+      "js-modules",
+      "js-functions"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-modules",
+    "title": "Modules",
+    "slug": "modules",
+    "tech": "js",
+    "mdPath": "/content/js/modules.md",
+    "summary": "ES Modules (ESM) let JavaScript code be split across multiple files, with explicit import/export statements controlling what's shared — improving organization, reusability, and ...",
+    "tags": [
+      "js",
+      "modules"
+    ],
+    "keywords": [
+      "modules",
+      "named",
+      "exports",
+      "imports",
+      "default",
+      "renaming",
+      "imports/exports",
+      "importing"
+    ],
+    "category": "architecture",
+    "estimatedTime": 5,
+    "related": [
+      "js-error-handling",
+      "js-browser-storage",
+      "js-classes-and-oop"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-browser-storage",
+    "title": "Browser Storage",
+    "slug": "browser-storage",
+    "tech": "js",
+    "mdPath": "/content/js/browser-storage.md",
+    "summary": "Browsers offer client-side storage APIs — localStorage and sessionStorage — to persist data without a server, useful for saving preferences, cached data, or session state.",
+    "tags": [
+      "js",
+      "browser",
+      "storage"
+    ],
+    "keywords": [
+      "browser",
+      "storage",
+      "localstorage",
+      "persists",
+      "indefinitely",
+      "sessionstorage",
+      "tab/session",
+      "storing"
+    ],
+    "category": "browser",
+    "estimatedTime": 5,
+    "related": [
+      "js-modules",
+      "js-timers"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-timers",
+    "title": "Timers",
+    "slug": "timers",
+    "tech": "js",
+    "mdPath": "/content/js/timers.md",
+    "summary": "Timers let JavaScript schedule code to run after a delay or repeatedly at intervals, powering things like debounced search, auto-save, slideshows, and countdowns.",
+    "tags": [
+      "js",
+      "timers"
+    ],
+    "keywords": [
+      "timers",
+      "settimeout",
+      "once",
+      "after",
+      "delay",
+      "cleartimeout",
+      "cancel",
+      "pending"
+    ],
+    "category": "browser",
+    "estimatedTime": 5,
+    "related": [
+      "js-browser-storage",
+      "js-classes-and-oop"
+    ],
+    "author": "Lakshya Bansal"
+  },
+  {
+    "id": "js-classes-and-oop",
+    "title": "Classes & OOP",
+    "slug": "classes-and-oop",
+    "tech": "js",
+    "mdPath": "/content/js/classes-and-oop.md",
+    "summary": "ES6 classes provide a cleaner syntax for creating objects and implementing object-oriented patterns like inheritance and encapsulation, built on top of JavaScript's existing pro...",
+    "tags": [
+      "js",
+      "classes",
+      "oop"
+    ],
+    "keywords": [
+      "classes",
+      "&",
+      "oop",
+      "class",
+      "declaration",
+      "constructor",
+      "instance",
+      "methods"
+    ],
+    "category": "architecture",
+    "estimatedTime": 6,
+    "related": [
+      "js-timers",
+      "js-modules"
+    ],
+    "author": "Lakshya Bansal"
+  }
+]

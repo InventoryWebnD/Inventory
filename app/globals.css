@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "highlight.js/styles/github-dark.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), Georgia, Cambria, serif;
+  --font-mono: var(--font-mono), monospace;
+  --font-heading: var(--font-serif), Georgia, serif;
+  --font-display: var(--font-serif), Georgia, serif;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}
+
+:root {
+  --background: #fbfbfa;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f2f0;
+  --secondary-foreground: #111111;
+  --muted: #f2f2f0;
+  --muted-foreground: #666666;
+  --accent: #f59e0b;
+  --accent-foreground: #111111;
+  --destructive: #dc2626;
+  --border: #e0e0dc;
+  --input: #d0d0cc;
+  --ring: #f59e0b;
+  --radius: 0px;
+  --shadow-hard-color: #111111;
+  --scrollbar-track: #f0f0ed;
+  --scrollbar-thumb: #222222;
+  --scrollbar-thumb-hover: #f59e0b;
+}
+
+.dark {
+  --background: #0c0d0e;
+  --foreground: #f4f4f6;
+  --card: #141517;
+  --card-foreground: #f4f4f6;
+  --popover: #141517;
+  --popover-foreground: #f4f4f6;
+  --primary: #f4f4f6;
+  --primary-foreground: #0c0d0e;
+  --secondary: #1f2023;
+  --secondary-foreground: #f4f4f6;
+  --muted: #1a1b1e;
+  --muted-foreground: #8e8e93;
+  --accent: #f59e0b;
+  --accent-foreground: #0c0d0e;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.16);
+  --input: rgba(255, 255, 255, 0.22);
+  --ring: #f59e0b;
+  --radius: 0px;
+  --shadow-hard-color: rgba(255, 255, 255, 0.2);
+  --scrollbar-track: #101114;
+  --scrollbar-thumb: #33363d;
+  --scrollbar-thumb-hover: #f59e0b;
+}
+
+@layer utilities {
+  .shadow-hard-xs {
+    box-shadow: 2px 2px 0px 0px var(--shadow-hard-color);
+  }
+  .shadow-hard-sm {
+    box-shadow: 3px 3px 0px 0px var(--shadow-hard-color);
+  }
+  .shadow-hard {
+    box-shadow: 4px 4px 0px 0px var(--shadow-hard-color);
+  }
+  .shadow-hard-lg {
+    box-shadow: 6px 6px 0px 0px var(--shadow-hard-color);
+  }
+  .shadow-hard-yellow {
+    box-shadow: 4px 4px 0px 0px var(--accent);
+  }
+  .shadow-hard-yellow-sm {
+    box-shadow: 2px 2px 0px 0px var(--accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  /* Custom WebnD retro scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-left: 1px solid var(--border);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 0px;
+    border: 1px solid var(--border);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-hover);
+    border-color: var(--scrollbar-thumb-hover);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track);
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "html",
+    "title": "HTML",
+    "slug": "html",
+    "description": "Build the structure, content, and semantic meaning of web pages.",
+    "icon": "/icons/html.svg"
+  },
+  {
+    "id": "css",
+    "title": "CSS",
+    "slug": "css",
+    "description": "Style presentations, responsive layouts, flexbox, grid, and animations.",
+    "icon": "/icons/css.svg"
+  },
+  {
+    "id": "js",
+    "title": "JavaScript",
+    "slug": "js",
+    "description": "Program dynamic interactivity, DOM events, asynchronous operations, and modern web logic.",
+    "icon": "/icons/js.svg"
+  }
+]

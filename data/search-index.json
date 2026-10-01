@@ -1,0 +1,966 @@
+[
+  {
+    "id": "html-boilerplate",
+    "title": "Boilerplate",
+    "tech": "html",
+    "slug": "boilerplate",
+    "summary": "Every HTML5 document starts from a standard skeleton called the boilerplate. It tells the browser what kind of document it is, sets the language, character encoding, and viewpor...",
+    "tags": [
+      "html",
+      "boilerplate"
+    ],
+    "keywords": [
+      "boilerplate",
+      "<!doctype",
+      "html>",
+      "declaration",
+      "<html>",
+      "root",
+      "element",
+      "lang"
+    ],
+    "category": "structure"
+  },
+  {
+    "id": "html-headings-and-paragraphs",
+    "title": "Headings & Paragraphs",
+    "tech": "html",
+    "slug": "headings-and-paragraphs",
+    "summary": "Headings and paragraphs are the backbone of textual content in HTML. Headings (<h1>–<h6>) create a hierarchical outline of a page, while paragraphs (<p>) group related sentences...",
+    "tags": [
+      "html",
+      "headings",
+      "paragraphs"
+    ],
+    "keywords": [
+      "headings",
+      "&",
+      "paragraphs",
+      "heading",
+      "levels",
+      "<h1>",
+      "<h6>",
+      "document"
+    ],
+    "category": "text"
+  },
+  {
+    "id": "html-lists",
+    "title": "Lists",
+    "tech": "html",
+    "slug": "lists",
+    "summary": "Lists organize related items into a structured, scannable format. HTML provides three list types: unordered (bullets), ordered (numbered), and description lists (term/definition...",
+    "tags": [
+      "html",
+      "lists"
+    ],
+    "keywords": [
+      "lists",
+      "unordered",
+      "<ul>",
+      "list",
+      "items",
+      "<li>",
+      "ordered",
+      "<ol>"
+    ],
+    "category": "text"
+  },
+  {
+    "id": "html-tables",
+    "title": "Tables",
+    "tech": "html",
+    "slug": "tables",
+    "summary": "HTML tables display tabular data — information organized into rows and columns, such as schedules, pricing charts, or reports. Tables should be reserved for genuine tabular data...",
+    "tags": [
+      "html",
+      "tables"
+    ],
+    "keywords": [
+      "tables",
+      "table",
+      "structure:",
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>",
+      "sections:"
+    ],
+    "category": "structure"
+  },
+  {
+    "id": "html-media",
+    "title": "Media",
+    "tech": "html",
+    "slug": "media",
+    "summary": "HTML supports embedding rich media directly into web pages: images, audio, and video, without relying on third-party plugins. Proper use of alt text, captions, and fallback cont...",
+    "tags": [
+      "html",
+      "media"
+    ],
+    "keywords": [
+      "media",
+      "images",
+      "<img>",
+      "responsive",
+      "images:",
+      "srcset",
+      "sizes",
+      "image"
+    ],
+    "category": "media"
+  },
+  {
+    "id": "html-buttons-and-inputs",
+    "title": "Buttons & Inputs",
+    "tech": "html",
+    "slug": "buttons-and-inputs",
+    "summary": "Buttons and inputs are the primary controls users interact with to take action or provide data — clicking, typing, selecting, and submitting. HTML5 offers a wide variety of <inp...",
+    "tags": [
+      "html",
+      "buttons",
+      "inputs"
+    ],
+    "keywords": [
+      "buttons",
+      "&",
+      "inputs",
+      "<button>",
+      "element",
+      "type",
+      "attribute",
+      "<input>"
+    ],
+    "category": "forms"
+  },
+  {
+    "id": "html-forms",
+    "title": "Forms",
+    "tech": "html",
+    "slug": "forms",
+    "summary": "The <form> element is the container that ties inputs, buttons, and other controls together so users can submit data to a server (or to JavaScript). Forms handle grouping, valida...",
+    "tags": [
+      "html",
+      "forms"
+    ],
+    "keywords": [
+      "forms",
+      "<form>",
+      "element",
+      "core",
+      "attributes",
+      "action",
+      "method",
+      "grouping"
+    ],
+    "category": "forms"
+  },
+  {
+    "id": "css-types",
+    "title": "Types",
+    "tech": "css",
+    "slug": "types",
+    "summary": "CSS can be applied in three ways: inline, internal, and external. Each has different scope, priority, and use cases.",
+    "tags": [
+      "css",
+      "types"
+    ],
+    "keywords": [
+      "types",
+      "inline",
+      "internal",
+      "external",
+      "cascade",
+      "specificity",
+      "type",
+      "!important"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "css-selectors",
+    "title": "Selectors",
+    "tech": "css",
+    "slug": "selectors",
+    "summary": "Selectors target HTML elements for styling. Understanding selector types and specificity (which rule wins when several apply) is core to writing predictable CSS.",
+    "tags": [
+      "css",
+      "selectors"
+    ],
+    "keywords": [
+      "selectors",
+      "universal",
+      "type",
+      "class",
+      "grouping",
+      "combinators",
+      "descendant",
+      "child"
+    ],
+    "category": "selectors"
+  },
+  {
+    "id": "css-inheritance",
+    "title": "Inheritance",
+    "tech": "css",
+    "slug": "inheritance",
+    "summary": "Inheritance lets certain CSS properties automatically pass from a parent element to its children, reducing repetition. Not all properties inherit by default — mostly text-relate...",
+    "tags": [
+      "css",
+      "inheritance"
+    ],
+    "keywords": [
+      "inheritance",
+      "inherited",
+      "non-inherited",
+      "properties",
+      "controlling",
+      "inheritance:",
+      "inherit",
+      "initial"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "css-box-model",
+    "title": "Box Model",
+    "tech": "css",
+    "slug": "box-model",
+    "summary": "Every HTML element is rendered as a rectangular box made of content, padding, border, and margin. Understanding this model is essential for controlling spacing and sizing accura...",
+    "tags": [
+      "css",
+      "box",
+      "model"
+    ],
+    "keywords": [
+      "box",
+      "model",
+      "content",
+      "padding",
+      "border",
+      "margin",
+      "layers",
+      "box-sizing:"
+    ],
+    "category": "box-model"
+  },
+  {
+    "id": "css-units",
+    "title": "Units",
+    "tech": "css",
+    "slug": "units",
+    "summary": "CSS units define lengths, sizes, and proportions. They're split into absolute units (fixed size) and relative units (scale based on context, like parent font size or viewport).",
+    "tags": [
+      "css",
+      "units"
+    ],
+    "keywords": [
+      "units",
+      "absolute",
+      "units:",
+      "relative",
+      "viewport",
+      "vmin",
+      "vmax",
+      "unitless"
+    ],
+    "category": "box-model"
+  },
+  {
+    "id": "css-functions",
+    "title": "Functions",
+    "tech": "css",
+    "slug": "functions",
+    "summary": "CSS functions let values be computed dynamically instead of hard-coded — performing math, choosing responsive values, or referencing variables. calc(), clamp(), min(), and max()...",
+    "tags": [
+      "css",
+      "functions"
+    ],
+    "keywords": [
+      "functions",
+      "calc",
+      "arithmetic",
+      "between",
+      "mixed",
+      "units",
+      "smallest",
+      "list"
+    ],
+    "category": "properties"
+  },
+  {
+    "id": "css-variables",
+    "title": "Variables",
+    "tech": "css",
+    "slug": "variables",
+    "summary": "CSS custom properties (variables) let you store reusable values — colors, spacing, fonts — in one place and reference them throughout a stylesheet, making themes and maintenance...",
+    "tags": [
+      "css",
+      "variables"
+    ],
+    "keywords": [
+      "variables",
+      "declaring",
+      "custom",
+      "properties",
+      "--name:",
+      "value;",
+      "scope:",
+      ":root"
+    ],
+    "category": "properties"
+  },
+  {
+    "id": "css-colour-and-background",
+    "title": "Colour & Background",
+    "tech": "css",
+    "slug": "colour-and-background",
+    "summary": "CSS offers multiple color formats and a rich set of background properties for controlling fills, images, gradients, and positioning behind content.",
+    "tags": [
+      "css",
+      "colour",
+      "background"
+    ],
+    "keywords": [
+      "colour",
+      "&",
+      "background",
+      "color",
+      "formats:",
+      "keyword",
+      "/rgba",
+      "/hsla"
+    ],
+    "category": "styling"
+  },
+  {
+    "id": "css-display-and-layout",
+    "title": "Display & Layout",
+    "tech": "css",
+    "slug": "display-and-layout",
+    "summary": "The display property determines how an element participates in the page's layout — whether it takes a full line, sits inline, or becomes a flex/grid container. It's the foundati...",
+    "tags": [
+      "css",
+      "display",
+      "layout"
+    ],
+    "keywords": [
+      "display",
+      "&",
+      "layout",
+      "display:",
+      "block",
+      "inline",
+      "inline-block",
+      "none"
+    ],
+    "category": "layout"
+  },
+  {
+    "id": "css-flexbox",
+    "title": "Flexbox",
+    "tech": "css",
+    "slug": "flexbox",
+    "summary": "Flexbox is a one-dimensional layout system for arranging items in a row or column, distributing space, and aligning content — ideal for navbars, cards, and centering.",
+    "tags": [
+      "css",
+      "flexbox"
+    ],
+    "keywords": [
+      "flexbox",
+      "display:",
+      "flex",
+      "container",
+      "setup",
+      "main",
+      "axis",
+      "cross"
+    ],
+    "category": "layout"
+  },
+  {
+    "id": "css-grid",
+    "title": "Grid",
+    "tech": "css",
+    "slug": "grid",
+    "summary": "CSS Grid is a two-dimensional layout system that arranges items into rows and columns simultaneously, making it ideal for full page layouts and complex UI structures.",
+    "tags": [
+      "css",
+      "grid"
+    ],
+    "keywords": [
+      "grid",
+      "display:",
+      "container",
+      "setup",
+      "grid-template-columns",
+      "grid-template-rows",
+      "unit",
+      "repeat"
+    ],
+    "category": "layout"
+  },
+  {
+    "id": "css-positioning",
+    "title": "Positioning",
+    "tech": "css",
+    "slug": "positioning",
+    "summary": "The position property controls how an element is placed relative to its normal position, its nearest positioned ancestor, or the viewport — enabling overlays, sticky headers, an...",
+    "tags": [
+      "css",
+      "positioning"
+    ],
+    "keywords": [
+      "positioning",
+      "position:",
+      "static",
+      "default",
+      "relative",
+      "absolute",
+      "fixed",
+      "sticky"
+    ],
+    "category": "layout"
+  },
+  {
+    "id": "css-typography",
+    "title": "Typography",
+    "tech": "css",
+    "slug": "typography",
+    "summary": "Typography properties control how text looks and reads: font family, size, weight, spacing, and alignment — key to readability and visual hierarchy.",
+    "tags": [
+      "css",
+      "typography"
+    ],
+    "keywords": [
+      "typography",
+      "font-family",
+      "font",
+      "stacks",
+      "fonts",
+      "@font-face",
+      "font-size",
+      "font-weight"
+    ],
+    "category": "styling"
+  },
+  {
+    "id": "css-borders-and-effects",
+    "title": "Borders & Effects",
+    "tech": "css",
+    "slug": "borders-and-effects",
+    "summary": "Borders define an element's visible edge, while visual effects like shadows and object-fit shape how content and media appear inside their containers.",
+    "tags": [
+      "css",
+      "borders",
+      "effects"
+    ],
+    "keywords": [
+      "borders",
+      "&",
+      "effects",
+      "border",
+      "shorthand",
+      "longhand",
+      "border-width",
+      "border-style"
+    ],
+    "category": "styling"
+  },
+  {
+    "id": "css-pseudo-selectors",
+    "title": "Pseudo Selectors",
+    "tech": "css",
+    "slug": "pseudo-selectors",
+    "summary": "Pseudo-classes select elements based on state or position (like :hover or :first-child), while pseudo-elements target a specific part of an element (like ::before or ::first-line).",
+    "tags": [
+      "css",
+      "pseudo",
+      "selectors"
+    ],
+    "keywords": [
+      "pseudo",
+      "selectors",
+      "pseudo-classes:",
+      ":hover",
+      ":focus",
+      ":active",
+      ":visited",
+      "structural"
+    ],
+    "category": "selectors"
+  },
+  {
+    "id": "css-responsiveness",
+    "title": "Responsiveness",
+    "tech": "css",
+    "slug": "responsiveness",
+    "summary": "Responsive CSS makes layouts adapt gracefully across screen sizes and devices, primarily through media queries, flexible units, and fluid layout techniques.",
+    "tags": [
+      "css",
+      "responsiveness"
+    ],
+    "keywords": [
+      "responsiveness",
+      "mobile-first",
+      "desktop-first",
+      "approach",
+      "@media",
+      "queries:",
+      "min-width",
+      "max-width"
+    ],
+    "category": "responsive"
+  },
+  {
+    "id": "css-transition-and-transform",
+    "title": "Transition & Transform",
+    "tech": "css",
+    "slug": "transition-and-transform",
+    "summary": "Transitions animate property changes smoothly over time, while transforms let elements move, rotate, scale, or skew without affecting document flow — together they create polish...",
+    "tags": [
+      "css",
+      "transition",
+      "transform"
+    ],
+    "keywords": [
+      "transition",
+      "&",
+      "transform",
+      "transition-property",
+      "transition-duration",
+      "transition-timing-function",
+      "transition-delay",
+      "shorthand"
+    ],
+    "category": "animation"
+  },
+  {
+    "id": "css-animation-and-keyframes",
+    "title": "Animation & Keyframes",
+    "tech": "css",
+    "slug": "animation-and-keyframes",
+    "summary": "CSS animations allow multi-step, looping, or complex motion sequences using @keyframes, going beyond what simple transitions can achieve (which only animate between two states).",
+    "tags": [
+      "css",
+      "animation",
+      "keyframes"
+    ],
+    "keywords": [
+      "animation",
+      "&",
+      "keyframes",
+      "@keyframes",
+      "rule",
+      "definition",
+      "animation-name",
+      "animation-duration"
+    ],
+    "category": "animation"
+  },
+  {
+    "id": "js-fundamentals",
+    "title": "Fundamentals",
+    "tech": "js",
+    "slug": "fundamentals",
+    "summary": "JavaScript is the programming language of the web, enabling interactivity, logic, and dynamic behavior in browsers (and beyond, via Node.js). This chapter covers how JS code is ...",
+    "tags": [
+      "js",
+      "fundamentals"
+    ],
+    "keywords": [
+      "fundamentals",
+      "statements",
+      "expressions",
+      "comments",
+      "variable",
+      "declarations:",
+      "const",
+      "scope:"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "js-data-types",
+    "title": "Data Types",
+    "tech": "js",
+    "slug": "data-types",
+    "summary": "JavaScript has two categories of data types: primitive types (stored by value) and reference types (stored by reference). Understanding type coercion and equality checking is es...",
+    "tags": [
+      "js",
+      "data",
+      "types"
+    ],
+    "keywords": [
+      "data",
+      "types",
+      "primitive",
+      "types:",
+      "string",
+      "number",
+      "boolean",
+      "undefined"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "js-operators",
+    "title": "Operators",
+    "tech": "js",
+    "slug": "operators",
+    "summary": "Operators perform actions on values: arithmetic, comparison, logical, assignment, and more. ES6+ adds convenient operators like optional chaining and nullish coalescing.",
+    "tags": [
+      "js",
+      "operators"
+    ],
+    "keywords": [
+      "operators",
+      "arithmetic",
+      "assignment",
+      "including",
+      "compound",
+      "comparison",
+      "etc.",
+      "logical"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "js-control-structures",
+    "title": "Control Structures",
+    "tech": "js",
+    "slug": "control-structures",
+    "summary": "Control structures direct the flow of execution — deciding which code runs and how many times, via conditionals and loops.",
+    "tags": [
+      "js",
+      "control",
+      "structures"
+    ],
+    "keywords": [
+      "control",
+      "structures",
+      "else",
+      "switch",
+      "loop",
+      "while",
+      "do...while",
+      "loops"
+    ],
+    "category": "basics"
+  },
+  {
+    "id": "js-functions",
+    "title": "Functions",
+    "tech": "js",
+    "slug": "functions",
+    "summary": "Functions are reusable blocks of logic. Modern JS adds arrow functions, default/rest parameters, and closures — a powerful mechanism where a function \"remembers\" variables from ...",
+    "tags": [
+      "js",
+      "functions"
+    ],
+    "keywords": [
+      "functions",
+      "function",
+      "declarations",
+      "expressions",
+      "arrow",
+      "parameters:",
+      "default",
+      "values"
+    ],
+    "category": "core"
+  },
+  {
+    "id": "js-arrays",
+    "title": "Arrays",
+    "tech": "js",
+    "slug": "arrays",
+    "summary": "Arrays store ordered lists of values. ES6+ provides powerful functional methods (map, filter, reduce) for transforming array data without manual loops.",
+    "tags": [
+      "js",
+      "arrays"
+    ],
+    "keywords": [
+      "arrays",
+      "creating",
+      "accessing/modifying",
+      "elements",
+      "mutating",
+      "methods:",
+      "push",
+      "shift"
+    ],
+    "category": "data-structures"
+  },
+  {
+    "id": "js-objects",
+    "title": "Objects",
+    "tech": "js",
+    "slug": "objects",
+    "summary": "Objects store data as key-value pairs and are the core building block for structuring complex data in JavaScript, alongside methods for creating, copying, and inspecting them.",
+    "tags": [
+      "js",
+      "objects"
+    ],
+    "keywords": [
+      "objects",
+      "object",
+      "literals",
+      "bracket",
+      "notation",
+      "adding/updating/deleting",
+      "properties",
+      "methods:"
+    ],
+    "category": "data-structures"
+  },
+  {
+    "id": "js-strings",
+    "title": "Strings",
+    "tech": "js",
+    "slug": "strings",
+    "summary": "Strings represent text. Modern JS provides template literals for readable string building plus a rich set of methods for searching, transforming, and splitting text.",
+    "tags": [
+      "js",
+      "strings"
+    ],
+    "keywords": [
+      "strings",
+      "string",
+      "creation",
+      "quotes",
+      "template",
+      "literals",
+      "interpolation",
+      "case"
+    ],
+    "category": "data-structures"
+  },
+  {
+    "id": "js-dom-introduction",
+    "title": "DOM Introduction",
+    "tech": "js",
+    "slug": "dom-introduction",
+    "summary": "The DOM (Document Object Model) is a live tree representation of an HTML page that JavaScript can read and modify — enabling dynamic content, styling, and structure changes with...",
+    "tags": [
+      "js",
+      "dom",
+      "introduction"
+    ],
+    "keywords": [
+      "dom",
+      "introduction",
+      "selecting",
+      "elements:",
+      "getelementbyid",
+      "queryselector",
+      "queryselectorall",
+      "reading/modifying"
+    ],
+    "category": "dom"
+  },
+  {
+    "id": "js-events",
+    "title": "Events",
+    "tech": "js",
+    "slug": "events",
+    "summary": "Events let JavaScript respond to user interactions (clicks, typing, scrolling) or browser actions (page load). Understanding event bubbling and delegation is key to writing effi...",
+    "tags": [
+      "js",
+      "events"
+    ],
+    "keywords": [
+      "events",
+      "adding/removing",
+      "listeners:",
+      "addeventlistener",
+      "removeeventlistener",
+      "common",
+      "event",
+      "types:"
+    ],
+    "category": "dom"
+  },
+  {
+    "id": "js-forms-and-inputs",
+    "title": "Forms & Inputs",
+    "tech": "js",
+    "slug": "forms-and-inputs",
+    "summary": "JavaScript can read, validate, and react to form input values in real time — essential for interactive forms, live validation, and custom submit handling.",
+    "tags": [
+      "js",
+      "forms",
+      "inputs"
+    ],
+    "keywords": [
+      "forms",
+      "&",
+      "inputs",
+      "accessing",
+      "form/input",
+      "values",
+      ".value",
+      ".checked"
+    ],
+    "category": "dom"
+  },
+  {
+    "id": "js-async-javascript",
+    "title": "Async JavaScript",
+    "tech": "js",
+    "slug": "async-javascript",
+    "summary": "JavaScript is single-threaded but handles time-consuming tasks (network requests, timers) asynchronously via the event loop, Promises, and the more readable async/await syntax b...",
+    "tags": [
+      "js",
+      "async",
+      "javascript"
+    ],
+    "keywords": [
+      "async",
+      "javascript",
+      "synchronous",
+      "asynchronous",
+      "execution",
+      "callbacks",
+      "callback",
+      "hell"
+    ],
+    "category": "async"
+  },
+  {
+    "id": "js-json-and-data",
+    "title": "JSON & Data",
+    "tech": "js",
+    "slug": "json-and-data",
+    "summary": "JSON (JavaScript Object Notation) is a lightweight, text-based data format used to exchange data between a client and server. JS provides built-in methods to convert between JSO...",
+    "tags": [
+      "js",
+      "json",
+      "data"
+    ],
+    "keywords": [
+      "json",
+      "&",
+      "data",
+      "syntax",
+      "rules",
+      "json.stringify",
+      "object",
+      "string"
+    ],
+    "category": "async"
+  },
+  {
+    "id": "js-error-handling",
+    "title": "Error Handling",
+    "tech": "js",
+    "slug": "error-handling",
+    "summary": "Error handling lets a program gracefully respond to unexpected failures — invalid input, failed network requests, or bugs — instead of crashing entirely. JavaScript uses try/cat...",
+    "tags": [
+      "js",
+      "error",
+      "handling"
+    ],
+    "keywords": [
+      "error",
+      "handling",
+      "catch",
+      "finally",
+      "object",
+      "properties",
+      "message",
+      "name"
+    ],
+    "category": "core"
+  },
+  {
+    "id": "js-modules",
+    "title": "Modules",
+    "tech": "js",
+    "slug": "modules",
+    "summary": "ES Modules (ESM) let JavaScript code be split across multiple files, with explicit import/export statements controlling what's shared — improving organization, reusability, and ...",
+    "tags": [
+      "js",
+      "modules"
+    ],
+    "keywords": [
+      "modules",
+      "named",
+      "exports",
+      "imports",
+      "default",
+      "renaming",
+      "imports/exports",
+      "importing"
+    ],
+    "category": "architecture"
+  },
+  {
+    "id": "js-browser-storage",
+    "title": "Browser Storage",
+    "tech": "js",
+    "slug": "browser-storage",
+    "summary": "Browsers offer client-side storage APIs — localStorage and sessionStorage — to persist data without a server, useful for saving preferences, cached data, or session state.",
+    "tags": [
+      "js",
+      "browser",
+      "storage"
+    ],
+    "keywords": [
+      "browser",
+      "storage",
+      "localstorage",
+      "persists",
+      "indefinitely",
+      "sessionstorage",
+      "tab/session",
+      "storing"
+    ],
+    "category": "browser"
+  },
+  {
+    "id": "js-timers",
+    "title": "Timers",
+    "tech": "js",
+    "slug": "timers",
+    "summary": "Timers let JavaScript schedule code to run after a delay or repeatedly at intervals, powering things like debounced search, auto-save, slideshows, and countdowns.",
+    "tags": [
+      "js",
+      "timers"
+    ],
+    "keywords": [
+      "timers",
+      "settimeout",
+      "once",
+      "after",
+      "delay",
+      "cleartimeout",
+      "cancel",
+      "pending"
+    ],
+    "category": "browser"
+  },
+  {
+    "id": "js-classes-and-oop",
+    "title": "Classes & OOP",
+    "tech": "js",
+    "slug": "classes-and-oop",
+    "summary": "ES6 classes provide a cleaner syntax for creating objects and implementing object-oriented patterns like inheritance and encapsulation, built on top of JavaScript's existing pro...",
+    "tags": [
+      "js",
+      "classes",
+      "oop"
+    ],
+    "keywords": [
+      "classes",
+      "&",
+      "oop",
+      "class",
+      "declaration",
+      "constructor",
+      "instance",
+      "methods"
+    ],
+    "category": "architecture"
+  }
+]
