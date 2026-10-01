@@ -1,13 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
     <div className="min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center px-4 py-16 text-center">
       <div className="max-w-md mx-auto space-y-6">
-        <div className="w-12 h-12 rounded-none border border-border bg-card shadow-hard-xs flex items-center justify-center mx-auto text-accent">
-          <BookOpen className="w-6 h-6" />
+        <div className="w-16 h-16 rounded-none border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs flex items-center justify-center mx-auto p-2">
+          <Image
+            src="/icons/logo.png"
+            alt="WebnD Logo"
+            width={48}
+            height={48}
+            className="w-full h-full object-contain"
+          />
         </div>
 
         <div className="space-y-2">

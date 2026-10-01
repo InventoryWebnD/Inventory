@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search, X, CornerDownLeft, Sparkles, Compass } from "lucide-react";
 import { searchConcepts } from "@/lib/search";
@@ -216,6 +217,18 @@ export default function SearchCommand({
         {/* Footer shortcuts */}
         <div className="px-4 py-2.5 border-t border-border bg-muted/40 flex items-center justify-between text-[11px] text-muted-foreground font-mono">
           <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5 text-foreground font-sans font-semibold pr-1.5 border-r border-border">
+              <span className="w-4 h-4 flex items-center justify-center bg-[#fbfbfa] bg-logo border border-border/80 p-0.5">
+                <Image
+                  src="/icons/logo.png"
+                  alt="WebnD"
+                  width={12}
+                  height={12}
+                  className="w-full h-full object-contain"
+                />
+              </span>
+              <span className="hidden sm:inline text-xs">WebnD</span>
+            </div>
             <span className="flex items-center gap-1">
               <kbd className="px-1.5 py-0.5 rounded-none bg-card border border-border text-[10px]">
                 ↑

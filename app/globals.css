@@ -95,18 +95,23 @@
   .shadow-hard-xs {
     box-shadow: 2px 2px 0px 0px var(--shadow-hard-color);
   }
+
   .shadow-hard-sm {
     box-shadow: 3px 3px 0px 0px var(--shadow-hard-color);
   }
+
   .shadow-hard {
     box-shadow: 4px 4px 0px 0px var(--shadow-hard-color);
   }
+
   .shadow-hard-lg {
     box-shadow: 6px 6px 0px 0px var(--shadow-hard-color);
   }
+
   .shadow-hard-yellow {
     box-shadow: 4px 4px 0px 0px var(--accent);
   }
+
   .shadow-hard-yellow-sm {
     box-shadow: 2px 2px 0px 0px var(--accent);
   }
@@ -153,5 +158,9 @@
 
   html {
     @apply font-sans;
+  }
+
+  .bg-logo {
+    background-color: #e3e3e3 !important;
   }
 }

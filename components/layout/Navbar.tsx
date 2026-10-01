@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 import SearchCommand from "@/components/search/SearchCommand";
 import ThemeToggle from "@/components/layout/ThemeToggle";
@@ -34,10 +35,19 @@ export default function Navbar() {
             {/* Brand Logo */}
             <Link
               href="/"
-              className="font-bold text-foreground tracking-tight hover:opacity-90 transition-opacity whitespace-nowrap text-sm sm:text-base flex items-center gap-2 group"
+              className="font-bold text-foreground tracking-tight hover:opacity-90 transition-opacity whitespace-nowrap text-sm sm:text-base flex items-center gap-2.5 group"
             >
-              <span className="w-2.5 h-2.5 bg-accent inline-block transition-transform group-hover:scale-110" />
-              <span>WebnD Inventory</span>
+              <div className="relative w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-none border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs group-hover:border-foreground/40 transition-all p-1">
+                <Image
+                  src="/icons/logo.png"
+                  alt="WebnD Logo"
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-contain transition-transform group-hover:scale-105"
+                  priority
+                />
+              </div>
+              <span className="font-semibold tracking-tight">WebnD Inventory</span>
             </Link>
 
             {/* Nav, Search & Theme Toggle */}

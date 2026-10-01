@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTechnologies } from "@/lib/content";
 import Container from "@/components/layout/Container";
 import TechCard from "@/components/tech/TechCard";
@@ -19,8 +20,16 @@ export default function LearnPage() {
         {/* Page Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 mb-10 border-b border-border">
           <div className="space-y-2 max-w-xl">
-            <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-              <span className="w-2 h-2 bg-accent inline-block" />
+            <div className="text-xs font-mono uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+              <span className="w-5 h-5 flex items-center justify-center bg-[#fbfbfa] bg-logo border border-border/80 p-0.5">
+                <Image
+                  src="/icons/logo.png"
+                  alt="WebnD Logo"
+                  width={14}
+                  height={14}
+                  className="w-full h-full object-contain"
+                />
+              </span>
               <span>Library</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-foreground">

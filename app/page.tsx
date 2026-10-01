@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTechnologies } from "@/lib/content";
 import Container from "@/components/layout/Container";
 import TechCard from "@/components/tech/TechCard";
@@ -12,8 +13,16 @@ export default function HomePage() {
       <Container size="default">
         {/* Hero Section */}
         <section className="text-center space-y-5 pb-12 sm:pb-16 border-b border-border">
-          <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-card text-xs font-mono uppercase tracking-wider text-muted-foreground shadow-hard-xs">
-            <span className="w-2 h-2 bg-accent inline-block" />
+          <div className="inline-flex items-center gap-2.5 px-3 py-1.5 border border-border bg-card text-xs font-mono uppercase tracking-wider text-muted-foreground shadow-hard-xs">
+            <span className="w-5 h-5 flex items-center justify-center bg-[#fbfbfa] bg-logo border border-border/80 p-0.5">
+              <Image
+                src="/icons/logo.png"
+                alt="WebnD Logo"
+                width={16}
+                height={16}
+                className="w-full h-full object-contain"
+              />
+            </span>
             <span>Search-first developer reference</span>
           </div>
 
