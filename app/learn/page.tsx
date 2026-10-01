@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { getTechnologies } from "@/lib/content";
 import Container from "@/components/layout/Container";
@@ -5,10 +6,26 @@ import TechCard from "@/components/tech/TechCard";
 import RecentConcepts from "@/components/concepts/RecentConcepts";
 import LearnSearchTrigger from "./LearnSearchTrigger";
 
-export const metadata = {
-  title: "Learn Web Technologies | WebnD Inventory",
+export const metadata: Metadata = {
+  title: "Technologies Library",
   description:
-    "Explore web technologies and browse focused, self-contained educational concepts.",
+    "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
+  alternates: {
+    canonical: "/learn",
+  },
+  openGraph: {
+    title: "Technologies Library | WebnD Inventory",
+    description:
+      "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
+    url: "/learn",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Technologies Library | WebnD Inventory",
+    description:
+      "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
+  },
 };
 
 export default function LearnPage() {

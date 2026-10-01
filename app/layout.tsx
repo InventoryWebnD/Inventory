@@ -20,9 +20,81 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://inventory.webnd.org";
+
 export const metadata: Metadata = {
-  title: "WebnD Inventory",
-  description: "A search-first, concept-based web development learning platform.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "WebnD Inventory — Search-First Web Development Reference",
+    template: "%s | WebnD Inventory",
+  },
+  description:
+    "A search-first, concept-based web development learning platform. Focused, self-contained concepts across HTML, CSS, JavaScript, and more.",
+  applicationName: "WebnD Inventory",
+  keywords: [
+    "WebnD",
+    "WebnD Inventory",
+    "web development",
+    "HTML reference",
+    "CSS reference",
+    "JavaScript concepts",
+    "frontend documentation",
+    "developer cheat sheet",
+    "flexbox",
+    "CSS grid",
+    "DOM manipulation",
+    "async javascript",
+    "web standards",
+  ],
+  authors: [
+    { name: "Web & Design Society", url: "https://github.com/InventoryWebnD" },
+  ],
+  creator: "Web & Design Society",
+  publisher: "Web & Design Society",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "WebnD Inventory — Search-First Web Development Reference",
+    description:
+      "A search-first, concept-based web development learning platform. Focused, self-contained concepts across HTML, CSS, JavaScript, and more.",
+    url: siteUrl,
+    siteName: "WebnD Inventory",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/icons/logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "WebnD Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "WebnD Inventory — Search-First Web Development Reference",
+    description:
+      "A search-first, concept-based web development learning platform.",
+    images: ["/icons/logo.png"],
+    creator: "@webnd",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/icons/logo.png", type: "image/png" },
@@ -32,6 +104,7 @@ export const metadata: Metadata = {
     shortcut: "/icons/logo.png",
     apple: "/apple-icon.png",
   },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -39,6 +112,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "WebnD Inventory",
+        description:
+          "A search-first, concept-based web development learning platform.",
+        publisher: {
+          "@id": `${siteUrl}/#organization`,
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${siteUrl}/learn?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Web & Design Society",
+        url: siteUrl,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/icons/logo.png`,
+        },
+      },
+    ],
+  };
+
   return (
     <html
       lang="en"
@@ -46,6 +151,10 @@ export default function RootLayout({
       className={`dark ${newsreader.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -17,12 +17,44 @@ export async function generateMetadata({
   const technology = getTechnologyBySlug(techSlug);
 
   if (!technology) {
-    return { title: "Technology Not Found | WebnD Inventory" };
+    return { title: "Technology Not Found" };
   }
 
+  const title = `${technology.title} Concepts`;
+  const description = technology.description;
+  const url = `/learn/${techSlug}`;
+
   return {
-    title: `${technology.title} Concepts | WebnD Inventory`,
-    description: technology.description,
+    title,
+    description,
+    keywords: [
+      technology.title,
+      `${technology.title} reference`,
+      `${technology.title} concepts`,
+      `${technology.title} cheat sheet`,
+      "web development",
+      "developer guide",
+    ],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${title} | WebnD Inventory`,
+      description,
+      url,
+      type: "website",
+      images: [
+        {
+          url: technology.icon || "/icons/logo.png",
+          alt: `${technology.title} logo`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: `${title} | WebnD Inventory`,
+      description,
+    },
   };
 }
 

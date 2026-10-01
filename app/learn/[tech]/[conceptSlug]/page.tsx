@@ -32,13 +32,47 @@ export async function generateMetadata({
 
   if (!concept || !technology) {
     return {
-      title: "Concept Not Found | WebnD Inventory",
+      title: "Concept Not Found",
     };
   }
 
+  const title = `${concept.title} (${technology.title})`;
+  const description = concept.summary;
+  const url = `/learn/${techSlug}/${conceptSlug}`;
+
   return {
-    title: `${concept.title} (${technology.title}) | WebnD Inventory`,
-    description: concept.summary,
+    title,
+    description,
+    keywords: [
+      concept.title,
+      technology.title,
+      ...(concept.category ? [concept.category] : []),
+      ...(concept.tags || []),
+      ...(concept.keywords || []),
+      `${concept.title} tutorial`,
+      `${technology.title} documentation`,
+      "web development",
+    ],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${title} | WebnD Inventory`,
+      description,
+      url,
+      type: "article",
+      images: [
+        {
+          url: technology.icon || "/icons/logo.png",
+          alt: `${concept.title} - ${technology.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: `${title} | WebnD Inventory`,
+      description,
+    },
   };
 }
 
@@ -59,8 +93,36 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
   const headings = extractHeadings(markdownContent);
   const relatedConcepts = getRelatedConcepts(concept);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://inventory.webnd.org";
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: concept.title,
+    description: concept.summary,
+    articleSection: concept.category,
+    inLanguage: "en-US",
+    url: `${siteUrl}/learn/${techSlug}/${conceptSlug}`,
+    author: {
+      "@type": "Organization",
+      name: "Web & Design Society",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Web & Design Society",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/icons/logo.png`,
+      },
+    },
+  };
+
   return (
     <div className="py-8 sm:py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Scroll Reading Progress Bar */}
       <ReadingProgress />
 
