@@ -1282,5 +1282,1754 @@
       "js-modules"
     ],
     "author": "Lakshya Bansal"
+  },
+  {
+    "id": "react-react-fundamentals",
+    "title": "React Fundamentals",
+    "slug": "react-fundamentals",
+    "tech": "react",
+    "mdPath": "/content/react/react-fundamentals.md",
+    "summary": "React is a JavaScript library for building user interfaces out of small, reusable components. Instead of finding DOM nodes and changing them by hand, you describe what the UI sh...",
+    "tags": [
+      "react",
+      "fundamentals"
+    ],
+    "keywords": [
+      "react",
+      "fundamentals",
+      "what",
+      "library",
+      "framework",
+      "declarative",
+      "imperative",
+      "components"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-jsx",
+      "react-components"
+    ]
+  },
+  {
+    "id": "react-jsx",
+    "title": "JSX",
+    "slug": "jsx",
+    "tech": "react",
+    "mdPath": "/content/react/jsx.md",
+    "summary": "JSX is a syntax extension that lets you write HTML-like markup inside JavaScript. It is not HTML: a build tool (Vite/Babel) compiles every JSX tag into a plain JavaScript functi...",
+    "tags": [
+      "react",
+      "jsx"
+    ],
+    "keywords": [
+      "jsx",
+      "compiled",
+      "javascript",
+      "embedding",
+      "expressions",
+      "attributes",
+      "classname",
+      "htmlfor"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-react-fundamentals",
+      "react-components",
+      "react-props"
+    ]
+  },
+  {
+    "id": "react-components",
+    "title": "Components",
+    "slug": "components",
+    "tech": "react",
+    "mdPath": "/content/react/components.md",
+    "summary": "A component is a JavaScript function that returns JSX. Components are the building blocks of every React app: you split the UI into small pieces (a Navbar, a ProductCard, a Butt...",
+    "tags": [
+      "react",
+      "components"
+    ],
+    "keywords": [
+      "components",
+      "function",
+      "naming",
+      "rules",
+      "pascalcase",
+      "nesting",
+      "composing",
+      "default"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-jsx",
+      "react-props",
+      "react-react-fundamentals"
+    ]
+  },
+  {
+    "id": "react-props",
+    "title": "Props",
+    "slug": "props",
+    "tech": "react",
+    "mdPath": "/content/react/props.md",
+    "summary": "Props (short for properties) are how a parent component passes data to a child. They work like function arguments: the child receives one object and reads values from it. Props ...",
+    "tags": [
+      "react",
+      "props"
+    ],
+    "keywords": [
+      "props",
+      "passing",
+      "strings",
+      "numbers",
+      "booleans",
+      "objects",
+      "functions",
+      "destructuring"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-components",
+      "react-state-and-usestate",
+      "react-react-fundamentals"
+    ]
+  },
+  {
+    "id": "react-state-and-usestate",
+    "title": "State and useState",
+    "slug": "state-and-usestate",
+    "tech": "react",
+    "mdPath": "/content/react/state-and-usestate.md",
+    "summary": "State is data that a component remembers between renders and that, when changed, makes React render the component again. You create it with the useState hook, which returns the ...",
+    "tags": [
+      "react",
+      "state",
+      "usestate"
+    ],
+    "keywords": [
+      "state",
+      "and",
+      "usestate",
+      "basics",
+      "array",
+      "destructuring",
+      "setter",
+      "function"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-props",
+      "react-events",
+      "react-lifting-state-up"
+    ]
+  },
+  {
+    "id": "react-events",
+    "title": "Events",
+    "slug": "events",
+    "tech": "react",
+    "mdPath": "/content/react/events.md",
+    "summary": "React lets you respond to user actions (clicks, typing, submits) by passing a function to an event prop like onClick. React wraps the browser event in a consistent object and ha...",
+    "tags": [
+      "react",
+      "events"
+    ],
+    "keywords": [
+      "events",
+      "onclick",
+      "onchange",
+      "onsubmit",
+      "onkeydown",
+      "onmouseenter",
+      "passing",
+      "function"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-state-and-usestate",
+      "react-conditional-rendering",
+      "react-react-fundamentals"
+    ]
+  },
+  {
+    "id": "react-conditional-rendering",
+    "title": "Conditional Rendering",
+    "slug": "conditional-rendering",
+    "tech": "react",
+    "mdPath": "/content/react/conditional-rendering.md",
+    "summary": "Conditional rendering means showing different UI depending on state or props. In React you use plain JavaScript - if, the ternary operator ? :, and && - to decide what a compone...",
+    "tags": [
+      "react",
+      "conditional",
+      "rendering"
+    ],
+    "keywords": [
+      "conditional",
+      "rendering",
+      "early",
+      "return",
+      "ternary",
+      "operator",
+      "condition",
+      "logical"
+    ],
+    "category": "rendering",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-events",
+      "react-lists-and-keys",
+      "react-forms-and-controlled-components"
+    ]
+  },
+  {
+    "id": "react-lists-and-keys",
+    "title": "Lists and Keys",
+    "slug": "lists-and-keys",
+    "tech": "react",
+    "mdPath": "/content/react/lists-and-keys.md",
+    "summary": "To show a collection of data, you transform an array into an array of JSX elements with .map(). Each element in the list needs a stable, unique key so React can tell which item ...",
+    "tags": [
+      "react",
+      "lists",
+      "keys"
+    ],
+    "keywords": [
+      "lists",
+      "and",
+      "keys",
+      "rendering",
+      "arrays",
+      ".map",
+      "prop",
+      "matters"
+    ],
+    "category": "rendering",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-conditional-rendering",
+      "react-forms-and-controlled-components",
+      "react-search-filter-sort"
+    ]
+  },
+  {
+    "id": "react-forms-and-controlled-components",
+    "title": "Forms and Controlled Components",
+    "slug": "forms-and-controlled-components",
+    "tech": "react",
+    "mdPath": "/content/react/forms-and-controlled-components.md",
+    "summary": "In React, form inputs are usually controlled: their value lives in state, and every keystroke updates that state through onChange. React is then the single source of truth, whic...",
+    "tags": [
+      "react",
+      "forms",
+      "controlled",
+      "components"
+    ],
+    "keywords": [
+      "forms",
+      "and",
+      "controlled",
+      "components",
+      "inputs",
+      "value",
+      "onchange",
+      "text"
+    ],
+    "category": "rendering",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-lists-and-keys",
+      "react-useeffect",
+      "react-conditional-rendering"
+    ]
+  },
+  {
+    "id": "react-useeffect",
+    "title": "useEffect",
+    "slug": "useeffect",
+    "tech": "react",
+    "mdPath": "/content/react/useeffect.md",
+    "summary": "useEffect lets a component synchronize with something outside React after it renders: fetching data, adding event listeners, starting timers, changing the document title, or tal...",
+    "tags": [
+      "react",
+      "useeffect"
+    ],
+    "keywords": [
+      "useeffect",
+      "effect",
+      "timing",
+      "after",
+      "render",
+      "dependency",
+      "array",
+      "none"
+    ],
+    "category": "hooks",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-forms-and-controlled-components",
+      "react-useref",
+      "react-usecontext"
+    ]
+  },
+  {
+    "id": "react-useref",
+    "title": "useRef",
+    "slug": "useref",
+    "tech": "react",
+    "mdPath": "/content/react/useref.md",
+    "summary": "useRef gives you a mutable box (ref.current) that survives re-renders without causing one. It has two main jobs: holding a reference to a DOM element (to focus an input or scrol...",
+    "tags": [
+      "react",
+      "useref"
+    ],
+    "keywords": [
+      "useref",
+      "initial",
+      "attaching",
+      "element",
+      "focusing",
+      "scrolling",
+      "measuring",
+      "playing"
+    ],
+    "category": "hooks",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-useeffect",
+      "react-usecontext",
+      "react-custom-hooks"
+    ]
+  },
+  {
+    "id": "react-usecontext",
+    "title": "useContext",
+    "slug": "usecontext",
+    "tech": "react",
+    "mdPath": "/content/react/usecontext.md",
+    "summary": "Context lets a parent make a value available to every component below it, without passing it as a prop through each level (\"prop drilling\"). You create a context, wrap part of t...",
+    "tags": [
+      "react",
+      "usecontext"
+    ],
+    "keywords": [
+      "usecontext",
+      "createcontext",
+      "provider",
+      "value",
+      "read",
+      "prop",
+      "drilling",
+      "problem"
+    ],
+    "category": "hooks",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-useref",
+      "react-lifting-state-up",
+      "react-useeffect"
+    ]
+  },
+  {
+    "id": "react-lifting-state-up",
+    "title": "Lifting State Up",
+    "slug": "lifting-state-up",
+    "tech": "react",
+    "mdPath": "/content/react/lifting-state-up.md",
+    "summary": "When two components need the same changing data, you cannot pass it sideways between siblings. Instead you move the state to their closest common parent and pass it down as prop...",
+    "tags": [
+      "react",
+      "lifting",
+      "state"
+    ],
+    "keywords": [
+      "lifting",
+      "state",
+      "up",
+      "single",
+      "source",
+      "truth",
+      "finding",
+      "closest"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-usecontext",
+      "react-component-communication",
+      "react-state-and-usestate"
+    ]
+  },
+  {
+    "id": "react-component-communication",
+    "title": "Component Communication",
+    "slug": "component-communication",
+    "tech": "react",
+    "mdPath": "/content/react/component-communication.md",
+    "summary": "React components talk to each other in a few well-defined ways. Data goes down from parent to child through props, and information goes up through callback functions that the pa...",
+    "tags": [
+      "react",
+      "component",
+      "communication"
+    ],
+    "keywords": [
+      "component",
+      "communication",
+      "parent",
+      "child",
+      "props",
+      "callback",
+      "sibling",
+      "passing"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-lifting-state-up",
+      "react-data-fetching-in-react",
+      "react-state-and-usestate"
+    ]
+  },
+  {
+    "id": "react-data-fetching-in-react",
+    "title": "Data Fetching in React",
+    "slug": "data-fetching-in-react",
+    "tech": "react",
+    "mdPath": "/content/react/data-fetching-in-react.md",
+    "summary": "Most real apps load data from an API. In React you fetch inside an effect (or an event handler), store the result in state, and render based on three situations: loading, error ...",
+    "tags": [
+      "react",
+      "data",
+      "fetching"
+    ],
+    "keywords": [
+      "data",
+      "fetching",
+      "in",
+      "react",
+      "fetch",
+      "response.json",
+      "asyncawait",
+      "useeffect"
+    ],
+    "category": "data",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-component-communication",
+      "react-advanced-data-fetching",
+      "react-crud-in-react"
+    ]
+  },
+  {
+    "id": "react-advanced-data-fetching",
+    "title": "Advanced Data Fetching",
+    "slug": "advanced-data-fetching",
+    "tech": "react",
+    "mdPath": "/content/react/advanced-data-fetching.md",
+    "summary": "Basic useEffect fetching works, but real apps hit extra problems: requests that finish out of order, requests for components that already left the screen, repeated loading of th...",
+    "tags": [
+      "react",
+      "advanced",
+      "data",
+      "fetching"
+    ],
+    "keywords": [
+      "advanced",
+      "data",
+      "fetching",
+      "race",
+      "conditions",
+      "response",
+      "arrives",
+      "last"
+    ],
+    "category": "data",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-data-fetching-in-react",
+      "react-react-router",
+      "react-crud-in-react"
+    ]
+  },
+  {
+    "id": "react-react-router",
+    "title": "React Router",
+    "slug": "react-router",
+    "tech": "react",
+    "mdPath": "/content/react/react-router.md",
+    "summary": "React is a Single Page Application library: the page never fully reloads. React Router is the standard library that maps URLs to components, so /products shows one component and...",
+    "tags": [
+      "react",
+      "router"
+    ],
+    "keywords": [
+      "react",
+      "router",
+      "installing",
+      "browserrouter",
+      "routes",
+      "route",
+      "link",
+      "navlink"
+    ],
+    "category": "routing",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-advanced-data-fetching",
+      "react-search-filter-sort",
+      "react-protected-routes-and-auth-ui"
+    ]
+  },
+  {
+    "id": "react-search-filter-sort",
+    "title": "Search, Filter and Sort",
+    "slug": "search-filter-sort",
+    "tech": "react",
+    "mdPath": "/content/react/search-filter-sort.md",
+    "summary": "Search, filter and sort are among the most common features in real React apps. The key idea: keep the original data and the user's choices (search text, selected category, sort ...",
+    "tags": [
+      "react",
+      "search,",
+      "filter",
+      "sort"
+    ],
+    "keywords": [
+      "search,",
+      "filter",
+      "and",
+      "sort",
+      "controlled",
+      "search",
+      "input",
+      "case-insensitive"
+    ],
+    "category": "rendering",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-react-router",
+      "react-persisting-state-with-localstorage",
+      "react-conditional-rendering"
+    ]
+  },
+  {
+    "id": "react-persisting-state-with-localstorage",
+    "title": "Persisting State with localStorage",
+    "slug": "persisting-state-with-localstorage",
+    "tech": "react",
+    "mdPath": "/content/react/persisting-state-with-localstorage.md",
+    "summary": "React state disappears when the page is refreshed. The browser's localStorage stores small strings that survive reloads, so you can use it to remember a theme, a cart or a draft...",
+    "tags": [
+      "react",
+      "persisting",
+      "state",
+      "with",
+      "localstorage"
+    ],
+    "keywords": [
+      "persisting",
+      "state",
+      "with",
+      "localstorage",
+      "localstorage.getitem",
+      "setitem",
+      "removeitem",
+      "json.stringify"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-search-filter-sort",
+      "react-protected-routes-and-auth-ui",
+      "react-state-and-usestate"
+    ]
+  },
+  {
+    "id": "react-protected-routes-and-auth-ui",
+    "title": "Protected Routes and Auth UI",
+    "slug": "protected-routes-and-auth-ui",
+    "tech": "react",
+    "mdPath": "/content/react/protected-routes-and-auth-ui.md",
+    "summary": "Authentication in React is about the user interface: tracking who is logged in, showing the right buttons and redirecting guests away from private pages. The real security check...",
+    "tags": [
+      "react",
+      "protected",
+      "routes",
+      "auth"
+    ],
+    "keywords": [
+      "protected",
+      "routes",
+      "and",
+      "auth",
+      "ui",
+      "state",
+      "context",
+      "user"
+    ],
+    "category": "routing",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 6,
+    "related": [
+      "react-persisting-state-with-localstorage",
+      "react-custom-hooks",
+      "react-react-router"
+    ]
+  },
+  {
+    "id": "react-custom-hooks",
+    "title": "Custom Hooks",
+    "slug": "custom-hooks",
+    "tech": "react",
+    "mdPath": "/content/react/custom-hooks.md",
+    "summary": "A custom hook is a JavaScript function whose name starts with use and that calls other hooks. It lets you extract and reuse stateful logic (not UI) between components: fetching,...",
+    "tags": [
+      "react",
+      "custom",
+      "hooks"
+    ],
+    "keywords": [
+      "custom",
+      "hooks",
+      "rules",
+      "name",
+      "starts",
+      "call",
+      "only",
+      "level"
+    ],
+    "category": "hooks",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-protected-routes-and-auth-ui",
+      "react-usereducer",
+      "react-useeffect"
+    ]
+  },
+  {
+    "id": "react-usereducer",
+    "title": "useReducer",
+    "slug": "usereducer",
+    "tech": "react",
+    "mdPath": "/content/react/usereducer.md",
+    "summary": "useReducer is an alternative to useState for complex state where many different actions update related values. You write one pure reducer(state, action) function that describes ...",
+    "tags": [
+      "react",
+      "usereducer"
+    ],
+    "keywords": [
+      "usereducer",
+      "reducer",
+      "initialstate",
+      "function",
+      "action",
+      "objects",
+      "dispatch",
+      "type"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-custom-hooks",
+      "react-state-management",
+      "react-state-and-usestate"
+    ]
+  },
+  {
+    "id": "react-state-management",
+    "title": "State Management",
+    "slug": "state-management",
+    "tech": "react",
+    "mdPath": "/content/react/state-management.md",
+    "summary": "\"State management\" is deciding where each piece of state lives and how components share it. Start simple: keep state local, lift it when siblings need it, use Context for app-wi...",
+    "tags": [
+      "react",
+      "state",
+      "management"
+    ],
+    "keywords": [
+      "state",
+      "management",
+      "local",
+      "shared",
+      "lifting",
+      "prop",
+      "drilling",
+      "context"
+    ],
+    "category": "state",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-usereducer",
+      "react-react-memo",
+      "react-state-and-usestate"
+    ]
+  },
+  {
+    "id": "react-react-memo",
+    "title": "React.memo",
+    "slug": "react-memo",
+    "tech": "react",
+    "mdPath": "/content/react/react-memo.md",
+    "summary": "By default, when a component re-renders, all its children re-render too, even if their props did not change. React.memo wraps a component so React skips re-rendering it when its...",
+    "tags": [
+      "react",
+      "react.memo"
+    ],
+    "keywords": [
+      "react.memo",
+      "default",
+      "re-render",
+      "behaviour",
+      "memo",
+      "component",
+      "shallow",
+      "prop"
+    ],
+    "category": "performance",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-state-management",
+      "react-usememo",
+      "react-usecallback"
+    ]
+  },
+  {
+    "id": "react-usememo",
+    "title": "useMemo",
+    "slug": "usememo",
+    "tech": "react",
+    "mdPath": "/content/react/usememo.md",
+    "summary": "useMemo caches the result of a calculation between renders and only recalculates it when its dependencies change. It helps in two cases: skipping an expensive computation, and k...",
+    "tags": [
+      "react",
+      "usememo"
+    ],
+    "keywords": [
+      "usememo",
+      "value",
+      "deps",
+      "expensive",
+      "calculations",
+      "filteringsorting",
+      "lists",
+      "referential"
+    ],
+    "category": "performance",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-react-memo",
+      "react-usecallback",
+      "react-performance-optimization"
+    ]
+  },
+  {
+    "id": "react-usecallback",
+    "title": "useCallback",
+    "slug": "usecallback",
+    "tech": "react",
+    "mdPath": "/content/react/usecallback.md",
+    "summary": "Every render creates new function objects. useCallback returns the same function reference between renders as long as its dependencies do not change. This matters when the funct...",
+    "tags": [
+      "react",
+      "usecallback"
+    ],
+    "keywords": [
+      "usecallback",
+      "deps",
+      "function",
+      "identity",
+      "javascript",
+      "passing",
+      "stable",
+      "callbacks"
+    ],
+    "category": "performance",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-usememo",
+      "react-performance-optimization",
+      "react-react-memo"
+    ]
+  },
+  {
+    "id": "react-performance-optimization",
+    "title": "Performance Optimization",
+    "slug": "performance-optimization",
+    "tech": "react",
+    "mdPath": "/content/react/performance-optimization.md",
+    "summary": "Most React apps are fast enough without special effort. Optimize after measuring, and start with the biggest wins: avoid unnecessary work, render less, load less code and keep s...",
+    "tags": [
+      "react",
+      "performance",
+      "optimization"
+    ],
+    "keywords": [
+      "performance",
+      "optimization",
+      "measuring",
+      "react",
+      "devtools",
+      "profiler",
+      "components",
+      "re-render"
+    ],
+    "category": "performance",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-usecallback",
+      "react-error-boundaries",
+      "react-react-memo"
+    ]
+  },
+  {
+    "id": "react-error-boundaries",
+    "title": "Error Boundaries",
+    "slug": "error-boundaries",
+    "tech": "react",
+    "mdPath": "/content/react/error-boundaries.md",
+    "summary": "If a component throws an error while rendering, React unmounts the whole tree and the user sees a blank page. An error boundary is a component that catches rendering errors in i...",
+    "tags": [
+      "react",
+      "error",
+      "boundaries"
+    ],
+    "keywords": [
+      "error",
+      "boundaries",
+      "what",
+      "catch",
+      "render",
+      "lifecycle",
+      "constructors",
+      "children"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-performance-optimization",
+      "react-loading-empty-and-error-states",
+      "react-strictmode"
+    ]
+  },
+  {
+    "id": "react-loading-empty-and-error-states",
+    "title": "Loading, Empty and Error States",
+    "slug": "loading-empty-and-error-states",
+    "tech": "react",
+    "mdPath": "/content/react/loading-empty-and-error-states.md",
+    "summary": "Any screen that shows data can be in more than one situation: loading, error, empty (no results) or success. Good React UIs plan for all of them so users never see a blank page ...",
+    "tags": [
+      "react",
+      "loading,",
+      "empty",
+      "error",
+      "states"
+    ],
+    "keywords": [
+      "loading,",
+      "empty",
+      "and",
+      "error",
+      "states",
+      "four",
+      "loading",
+      "success"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-error-boundaries",
+      "react-lifecycle-and-rendering",
+      "react-strictmode"
+    ]
+  },
+  {
+    "id": "react-lifecycle-and-rendering",
+    "title": "Lifecycle and Rendering",
+    "slug": "lifecycle-and-rendering",
+    "tech": "react",
+    "mdPath": "/content/react/lifecycle-and-rendering.md",
+    "summary": "A function component goes through three phases: mount (first appears), update (re-renders because state, props or context changed) and unmount (removed). Understanding how React...",
+    "tags": [
+      "react",
+      "lifecycle",
+      "rendering"
+    ],
+    "keywords": [
+      "lifecycle",
+      "and",
+      "rendering",
+      "render",
+      "phase",
+      "commit",
+      "mounting",
+      "updating"
+    ],
+    "category": "rendering",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-loading-empty-and-error-states",
+      "react-strictmode",
+      "react-conditional-rendering"
+    ]
+  },
+  {
+    "id": "react-strictmode",
+    "title": "StrictMode",
+    "slug": "strictmode",
+    "tech": "react",
+    "mdPath": "/content/react/strictmode.md",
+    "summary": "<StrictMode> is a development-only wrapper that helps you find bugs early. In development it renders components an extra time and runs each effect's setup and cleanup an extra t...",
+    "tags": [
+      "react",
+      "strictmode"
+    ],
+    "keywords": [
+      "strictmode",
+      "enabling",
+      "main.jsx",
+      "double",
+      "render",
+      "development",
+      "effect",
+      "setup"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-lifecycle-and-rendering",
+      "react-accessibility",
+      "react-error-boundaries"
+    ]
+  },
+  {
+    "id": "react-accessibility",
+    "title": "Accessibility in React",
+    "slug": "accessibility",
+    "tech": "react",
+    "mdPath": "/content/react/accessibility.md",
+    "summary": "Accessibility (a11y) means everyone can use your app, including people who use a keyboard only, screen readers or high zoom. Most accessibility comes from writing semantic HTML ...",
+    "tags": [
+      "react",
+      "accessibility"
+    ],
+    "keywords": [
+      "accessibility",
+      "in",
+      "react",
+      "semantic",
+      "elements",
+      "button",
+      "main",
+      "header"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-strictmode",
+      "react-styling-in-react",
+      "react-error-boundaries"
+    ]
+  },
+  {
+    "id": "react-styling-in-react",
+    "title": "Styling in React",
+    "slug": "styling-in-react",
+    "tech": "react",
+    "mdPath": "/content/react/styling-in-react.md",
+    "summary": "React does not force a styling method. You can use plain CSS files, CSS Modules (locally scoped class names), inline style objects, utility CSS like Tailwind, or CSS-in-JS libra...",
+    "tags": [
+      "react",
+      "styling"
+    ],
+    "keywords": [
+      "styling",
+      "in",
+      "react",
+      "global",
+      "import",
+      ".index.css",
+      "classname",
+      "instead"
+    ],
+    "category": "architecture",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-accessibility",
+      "react-project-setup-with-vite",
+      "react-project-architecture"
+    ]
+  },
+  {
+    "id": "react-project-setup-with-vite",
+    "title": "Project Setup with Vite",
+    "slug": "project-setup-with-vite",
+    "tech": "react",
+    "mdPath": "/content/react/project-setup-with-vite.md",
+    "summary": "Create React App is deprecated; the standard way to start a new React project is Vite, a fast build tool with instant dev server startup and optimized production builds. This to...",
+    "tags": [
+      "react",
+      "project",
+      "setup",
+      "with",
+      "vite"
+    ],
+    "keywords": [
+      "project",
+      "setup",
+      "with",
+      "vite",
+      "create",
+      "vitelatest",
+      "structure",
+      "index.html"
+    ],
+    "category": "architecture",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-styling-in-react",
+      "react-project-architecture",
+      "react-reusable-components-and-composition"
+    ]
+  },
+  {
+    "id": "react-project-architecture",
+    "title": "Project Architecture",
+    "slug": "project-architecture",
+    "tech": "react",
+    "mdPath": "/content/react/project-architecture.md",
+    "summary": "As a React app grows, a clear folder structure keeps it easy to read and change. There is no official layout; good structures follow a few ideas: group files by feature, keep re...",
+    "tags": [
+      "react",
+      "project",
+      "architecture"
+    ],
+    "keywords": [
+      "project",
+      "architecture",
+      "folder",
+      "structure",
+      "type",
+      "feature",
+      "components",
+      "pages"
+    ],
+    "category": "architecture",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-project-setup-with-vite",
+      "react-reusable-components-and-composition",
+      "react-styling-in-react"
+    ]
+  },
+  {
+    "id": "react-reusable-components-and-composition",
+    "title": "Reusable Components and Composition",
+    "slug": "reusable-components-and-composition",
+    "tech": "react",
+    "mdPath": "/content/react/reusable-components-and-composition.md",
+    "summary": "React favours composition over inheritance: build complex UIs by combining small components and letting parents decide what goes inside through children and props. A good reusab...",
+    "tags": [
+      "react",
+      "reusable",
+      "components",
+      "composition"
+    ],
+    "keywords": [
+      "reusable",
+      "components",
+      "and",
+      "composition",
+      "children",
+      "slot",
+      "props",
+      "variants"
+    ],
+    "category": "architecture",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "react-project-architecture",
+      "react-design-patterns",
+      "react-styling-in-react"
+    ]
+  },
+  {
+    "id": "react-design-patterns",
+    "title": "React Design Patterns",
+    "slug": "design-patterns",
+    "tech": "react",
+    "mdPath": "/content/react/design-patterns.md",
+    "summary": "Design patterns are proven ways of structuring components and logic. Today the most useful ones are custom hooks (reuse logic), composition (reuse UI), compound components (rela...",
+    "tags": [
+      "react",
+      "design",
+      "patterns"
+    ],
+    "keywords": [
+      "react",
+      "design",
+      "patterns",
+      "container",
+      "presentational",
+      "split",
+      "custom",
+      "hooks"
+    ],
+    "category": "architecture",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-reusable-components-and-composition",
+      "react-devtools-and-debugging",
+      "react-styling-in-react"
+    ]
+  },
+  {
+    "id": "react-devtools-and-debugging",
+    "title": "DevTools and Debugging",
+    "slug": "devtools-and-debugging",
+    "tech": "react",
+    "mdPath": "/content/react/devtools-and-debugging.md",
+    "summary": "Debugging React means finding out why the UI differs from what you expect. Your tools are the browser console, the React Developer Tools extension (Components and Profiler tabs)...",
+    "tags": [
+      "react",
+      "devtools",
+      "debugging"
+    ],
+    "keywords": [
+      "devtools",
+      "and",
+      "debugging",
+      "react",
+      "developer",
+      "tools",
+      "components",
+      "props"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-design-patterns",
+      "react-testing-react",
+      "react-error-boundaries"
+    ]
+  },
+  {
+    "id": "react-testing-react",
+    "title": "Testing React",
+    "slug": "testing-react",
+    "tech": "react",
+    "mdPath": "/content/react/testing-react.md",
+    "summary": "Tests prove that components behave correctly and keep working after changes. The modern approach uses Vitest (or Jest) as the test runner and React Testing Library to render com...",
+    "tags": [
+      "react",
+      "testing"
+    ],
+    "keywords": [
+      "testing",
+      "react",
+      "test",
+      "runner",
+      "vitestjest",
+      "jsdom",
+      "library",
+      "render"
+    ],
+    "category": "quality",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-devtools-and-debugging",
+      "react-crud-in-react",
+      "react-error-boundaries"
+    ]
+  },
+  {
+    "id": "react-crud-in-react",
+    "title": "CRUD in React",
+    "slug": "crud-in-react",
+    "tech": "react",
+    "mdPath": "/content/react/crud-in-react.md",
+    "summary": "CRUD stands for Create, Read, Update, Delete, the four actions almost every data-driven interface needs. In React you keep the list in state, call an API (or a mock like json-se...",
+    "tags": [
+      "react",
+      "crud"
+    ],
+    "keywords": [
+      "crud",
+      "in",
+      "react",
+      "http",
+      "methods",
+      "post",
+      "putpatch",
+      "delete"
+    ],
+    "category": "data",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 6,
+    "related": [
+      "react-testing-react",
+      "react-modern-react",
+      "react-data-fetching-in-react"
+    ]
+  },
+  {
+    "id": "react-modern-react",
+    "title": "Modern React (React 19)",
+    "slug": "modern-react",
+    "tech": "react",
+    "mdPath": "/content/react/modern-react.md",
+    "summary": "React 19 made common tasks simpler: forms can use Actions, pending/optimistic UI have dedicated hooks, ref is a normal prop, and a use API reads promises and context. The React ...",
+    "tags": [
+      "react",
+      "modern",
+      "(react",
+      "19)"
+    ],
+    "keywords": [
+      "modern",
+      "react",
+      "(react",
+      "19)",
+      "actions",
+      "form",
+      "actionfn",
+      "useactionstate"
+    ],
+    "category": "modern",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 6,
+    "related": [
+      "react-crud-in-react",
+      "react-professional-react-practices"
+    ]
+  },
+  {
+    "id": "react-professional-react-practices",
+    "title": "Professional React Practices",
+    "slug": "professional-react-practices",
+    "tech": "react",
+    "mdPath": "/content/react/professional-react-practices.md",
+    "summary": "Professional React code is not about clever tricks; it is about clear, predictable, maintainable code. This topic collects the habits that separate a beginner project from produ...",
+    "tags": [
+      "react",
+      "professional",
+      "practices"
+    ],
+    "keywords": [
+      "professional",
+      "react",
+      "practices",
+      "keep",
+      "components",
+      "small",
+      "focused",
+      "minimal"
+    ],
+    "category": "modern",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "react-modern-react"
+    ]
+  },
+  {
+    "id": "tailwind-introduction-and-setup",
+    "title": "Introduction & Setup",
+    "slug": "introduction-and-setup",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/introduction-and-setup.md",
+    "summary": "Tailwind CSS is a utility-first CSS framework: instead of writing custom CSS classes, you compose small single-purpose classes like flex, p-4, and text-center directly in your H...",
+    "tags": [
+      "tailwind",
+      "introduction",
+      "setup"
+    ],
+    "keywords": [
+      "introduction",
+      "&",
+      "setup",
+      "what",
+      "utility-first",
+      "means",
+      "installing",
+      "tailwind"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "tailwind-utility-first-fundamentals"
+    ]
+  },
+  {
+    "id": "tailwind-utility-first-fundamentals",
+    "title": "Utility-First Fundamentals",
+    "slug": "utility-first-fundamentals",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/utility-first-fundamentals.md",
+    "summary": "The utility-first workflow means styling by combining many small classes, each doing one job. It keeps styles next to the markup, removes the need to invent class names, and kee...",
+    "tags": [
+      "tailwind",
+      "utility",
+      "first",
+      "fundamentals"
+    ],
+    "keywords": [
+      "utility",
+      "first",
+      "fundamentals",
+      "classes",
+      "traditional",
+      "reading",
+      "class",
+      "list"
+    ],
+    "category": "basics",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "tailwind-introduction-and-setup",
+      "tailwind-spacing-and-sizing"
+    ]
+  },
+  {
+    "id": "tailwind-spacing-and-sizing",
+    "title": "Spacing & Sizing",
+    "slug": "spacing-and-sizing",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/spacing-and-sizing.md",
+    "summary": "Tailwind uses one spacing scale for padding, margin, gap, width, height and more. Learning that scale and a handful of sizing helpers lets you build consistent layouts quickly.",
+    "tags": [
+      "tailwind",
+      "spacing",
+      "sizing"
+    ],
+    "keywords": [
+      "spacing",
+      "&",
+      "sizing",
+      "scale",
+      "0.25rem",
+      "padding",
+      "margin",
+      "mx-auto"
+    ],
+    "category": "styling",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "tailwind-utility-first-fundamentals",
+      "tailwind-typography",
+      "tailwind-colors-and-backgrounds"
+    ]
+  },
+  {
+    "id": "tailwind-typography",
+    "title": "Typography",
+    "slug": "typography",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/typography.md",
+    "summary": "Tailwind gives you utilities for font size, weight, line height, spacing, alignment and decoration, so you can set up a complete type system without writing CSS.",
+    "tags": [
+      "tailwind",
+      "typography"
+    ],
+    "keywords": [
+      "typography",
+      "font",
+      "size",
+      "text-sm",
+      "text-xl",
+      "text-4xl",
+      "weight",
+      "font-light"
+    ],
+    "category": "styling",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-spacing-and-sizing",
+      "tailwind-colors-and-backgrounds",
+      "tailwind-borders-shadows-and-effects"
+    ]
+  },
+  {
+    "id": "tailwind-colors-and-backgrounds",
+    "title": "Colors & Backgrounds",
+    "slug": "colors-and-backgrounds",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/colors-and-backgrounds.md",
+    "summary": "Tailwind ships with a carefully designed color palette (each color has shades from 50 to 950) and utilities for text, background, border and gradient colors, plus opacity modifi...",
+    "tags": [
+      "tailwind",
+      "colors",
+      "backgrounds"
+    ],
+    "keywords": [
+      "colors",
+      "&",
+      "backgrounds",
+      "palette",
+      "shades",
+      "sky-500",
+      "slate-900",
+      "text"
+    ],
+    "category": "styling",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-typography",
+      "tailwind-borders-shadows-and-effects",
+      "tailwind-spacing-and-sizing"
+    ]
+  },
+  {
+    "id": "tailwind-borders-shadows-and-effects",
+    "title": "Borders, Shadows & Effects",
+    "slug": "borders-shadows-and-effects",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/borders-shadows-and-effects.md",
+    "summary": "Borders, rounded corners, shadows, rings, blur and opacity add depth and polish to a design. Tailwind exposes all of them as short utilities that can be combined and animated.",
+    "tags": [
+      "tailwind",
+      "borders,",
+      "shadows",
+      "effects"
+    ],
+    "keywords": [
+      "borders,",
+      "shadows",
+      "&",
+      "effects",
+      "border",
+      "width",
+      "style",
+      "color"
+    ],
+    "category": "styling",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-colors-and-backgrounds",
+      "tailwind-layout-and-positioning",
+      "tailwind-spacing-and-sizing"
+    ]
+  },
+  {
+    "id": "tailwind-layout-and-positioning",
+    "title": "Layout & Positioning",
+    "slug": "layout-and-positioning",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/layout-and-positioning.md",
+    "summary": "Before reaching for flexbox or grid, you need Tailwind's core layout utilities: display, position, z-index, overflow and visibility. They decide how elements flow, stack and ove...",
+    "tags": [
+      "tailwind",
+      "layout",
+      "positioning"
+    ],
+    "keywords": [
+      "layout",
+      "&",
+      "positioning",
+      "display",
+      "block",
+      "inline-block",
+      "hidden",
+      "flex"
+    ],
+    "category": "layout",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-borders-shadows-and-effects",
+      "tailwind-flexbox",
+      "tailwind-grid"
+    ]
+  },
+  {
+    "id": "tailwind-flexbox",
+    "title": "Flexbox",
+    "slug": "flexbox",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/flexbox.md",
+    "summary": "Flexbox in Tailwind is a handful of intuitive classes that arrange items in a row or column, align them, space them out and let them grow or shrink. It is the go-to tool for nav...",
+    "tags": [
+      "tailwind",
+      "flexbox"
+    ],
+    "keywords": [
+      "flexbox",
+      "flex",
+      "inline-flex",
+      "direction",
+      "flex-row",
+      "flex-col",
+      "flex-row-reverse",
+      "wrapping"
+    ],
+    "category": "layout",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-layout-and-positioning",
+      "tailwind-grid"
+    ]
+  },
+  {
+    "id": "tailwind-grid",
+    "title": "Grid",
+    "slug": "grid",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/grid.md",
+    "summary": "Tailwind's grid utilities let you build two-dimensional layouts with a single line: define columns with grid-cols-*, space them with gap-*, and make items span multiple tracks w...",
+    "tags": [
+      "tailwind",
+      "grid"
+    ],
+    "keywords": [
+      "grid",
+      "inline-grid",
+      "columns",
+      "rows",
+      "grid-cols-",
+      "grid-rows-",
+      "spanning",
+      "col-span-"
+    ],
+    "category": "layout",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-flexbox",
+      "tailwind-responsive-design",
+      "tailwind-layout-and-positioning"
+    ]
+  },
+  {
+    "id": "tailwind-responsive-design",
+    "title": "Responsive Design",
+    "slug": "responsive-design",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/responsive-design.md",
+    "summary": "Tailwind is mobile-first: unprefixed utilities apply to every screen size, and breakpoint prefixes like md: apply from that width and up. This makes responsive design a matter o...",
+    "tags": [
+      "tailwind",
+      "responsive",
+      "design"
+    ],
+    "keywords": [
+      "responsive",
+      "design",
+      "mobile-first",
+      "approach",
+      "default",
+      "breakpoints",
+      "targeting",
+      "range"
+    ],
+    "category": "responsive",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-grid",
+      "tailwind-state-variants",
+      "tailwind-dark-mode"
+    ]
+  },
+  {
+    "id": "tailwind-state-variants",
+    "title": "State Variants",
+    "slug": "state-variants",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/state-variants.md",
+    "summary": "Variants are prefixes that apply a utility only in a certain state — hover:, focus:, active:, disabled:, group-hover: and many more. They let you build interactive UI entirely i...",
+    "tags": [
+      "tailwind",
+      "state",
+      "variants"
+    ],
+    "keywords": [
+      "state",
+      "variants",
+      "pseudo-classes",
+      "hover",
+      "focus",
+      "focus-visible",
+      "active",
+      "disabled"
+    ],
+    "category": "responsive",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-responsive-design",
+      "tailwind-dark-mode"
+    ]
+  },
+  {
+    "id": "tailwind-dark-mode",
+    "title": "Dark Mode",
+    "slug": "dark-mode",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/dark-mode.md",
+    "summary": "Tailwind's dark: variant applies styles when dark mode is active. By default it follows the operating system preference, and you can switch to a manual toggle (class or data att...",
+    "tags": [
+      "tailwind",
+      "dark",
+      "mode"
+    ],
+    "keywords": [
+      "dark",
+      "mode",
+      "variant",
+      "system",
+      "preference",
+      "prefers-color-scheme",
+      "default",
+      "manual"
+    ],
+    "category": "responsive",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "tailwind-state-variants",
+      "tailwind-transitions-and-animations",
+      "tailwind-responsive-design"
+    ]
+  },
+  {
+    "id": "tailwind-transitions-and-animations",
+    "title": "Transitions & Animations",
+    "slug": "transitions-and-animations",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/transitions-and-animations.md",
+    "summary": "Tailwind makes motion easy: transition utilities smooth state changes, transform utilities move, scale and rotate elements, and built-in animate-* classes provide spinners, puls...",
+    "tags": [
+      "tailwind",
+      "transitions",
+      "animations"
+    ],
+    "keywords": [
+      "transitions",
+      "&",
+      "animations",
+      "transition",
+      "duration-",
+      "ease-",
+      "delay-",
+      "transforms"
+    ],
+    "category": "motion",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 3,
+    "related": [
+      "tailwind-dark-mode",
+      "tailwind-customization-with-theme"
+    ]
+  },
+  {
+    "id": "tailwind-customization-with-theme",
+    "title": "Customization with @theme",
+    "slug": "customization-with-theme",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/customization-with-theme.md",
+    "summary": "Tailwind v4 is configured in CSS. The @theme directive defines design tokens — colors, fonts, spacing, breakpoints, shadows, animations — as CSS variables, and Tailwind automati...",
+    "tags": [
+      "tailwind",
+      "customization",
+      "with",
+      "@theme"
+    ],
+    "keywords": [
+      "customization",
+      "with",
+      "@theme",
+      "theme",
+      "directive",
+      "variable",
+      "namespaces",
+      "--color-"
+    ],
+    "category": "customization",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 4,
+    "related": [
+      "tailwind-transitions-and-animations",
+      "tailwind-reusing-styles-and-components"
+    ]
+  },
+  {
+    "id": "tailwind-reusing-styles-and-components",
+    "title": "Reusing Styles & Components",
+    "slug": "reusing-styles-and-components",
+    "tech": "tailwind",
+    "mdPath": "/content/tailwind/reusing-styles-and-components.md",
+    "summary": "Long class lists are fine when they live in one place. This lesson covers the right ways to avoid repetition in Tailwind: components first, then @apply, @utility and @layer, plu...",
+    "tags": [
+      "tailwind",
+      "reusing",
+      "styles",
+      "components"
+    ],
+    "keywords": [
+      "reusing",
+      "styles",
+      "&",
+      "components",
+      "extracting",
+      "react",
+      "templates",
+      "apply"
+    ],
+    "category": "customization",
+    "author": "Lakshya Bansal",
+    "estimatedTime": 5,
+    "related": [
+      "tailwind-customization-with-theme"
+    ]
   }
 ]

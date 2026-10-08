@@ -17,7 +17,7 @@ export default function SearchResult({
       role="option"
       aria-selected={isSelected}
       onClick={() => onSelect(item)}
-      className={`px-3.5 py-2.5 rounded-none cursor-pointer transition-all flex items-center justify-between gap-3 border ${
+      className={`px-3.5 py-2.5 rounded-lg cursor-pointer transition-all flex items-center justify-between gap-3 border ${
         isSelected
           ? "bg-foreground text-background border-foreground shadow-hard-xs"
           : "border-transparent hover:border-border hover:bg-muted/60 text-foreground"
@@ -26,7 +26,7 @@ export default function SearchResult({
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2 mb-0.5">
           <span
-            className={`text-[10px] font-mono font-semibold uppercase tracking-wider px-1.5 py-0.2 rounded-none border ${
+            className={`text-[10px] font-mono font-semibold uppercase tracking-wider px-1.5 py-0.2 rounded-lg border ${
               isSelected
                 ? "bg-background/20 border-background/30 text-background"
                 : "bg-muted border-border text-muted-foreground"
@@ -50,7 +50,7 @@ export default function SearchResult({
           {item.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className={`text-[10px] font-mono px-1.5 py-0.5 rounded-none border ${
+              className={`text-[10px] font-mono px-1.5 py-0.5 rounded-lg border ${
                 isSelected
                   ? "bg-background/15 border-background/20 text-background"
                   : "bg-muted/50 border-border text-muted-foreground"

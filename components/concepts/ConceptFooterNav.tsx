@@ -18,7 +18,7 @@ export default function ConceptFooterNav({
       {relatedConcepts.length > 0 && (
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground">
-            <Compass className="w-3.5 h-3.5 text-accent" />
+            <Compass className="w-3.5 h-3.5 text-accent-ink" />
             <span>Explore Related Concepts</span>
           </div>
 
@@ -27,7 +27,7 @@ export default function ConceptFooterNav({
               <Link
                 key={item.id}
                 href={`/learn/${item.tech}/${item.slug}`}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-none border border-border bg-card hover:border-foreground/80 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-xs text-xs font-medium text-foreground transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-border bg-card hover:border-accent hover:-translate-y-1 hover:shadow-hard-xs text-xs font-medium text-foreground transition-all cursor-pointer"
               >
                 <span>{item.title}</span>
               </Link>

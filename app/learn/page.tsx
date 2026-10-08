@@ -69,8 +69,8 @@ export default function LearnPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {technologies.map((tech) => (
-              <TechCard key={tech.id} technology={tech} />
+            {technologies.map((tech, i) => (
+              <TechCard key={tech.id} technology={tech} index={i} />
             ))}
           </div>
         </section>
