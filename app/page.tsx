@@ -5,58 +5,86 @@ import TechCard from "@/components/tech/TechCard";
 import RecentConcepts from "@/components/concepts/RecentConcepts";
 import HomeSearchTrigger from "@/components/search/HomeSearchTrigger";
 
+import HeroCube from "@/components/home/HeroCube";
+import Ticker from "@/components/home/Ticker";
+
 export default function HomePage() {
   const technologies = getTechnologies();
+  // Every face links to a technology. With fewer than 6 technologies they repeat,
+  // so any new tech added to data/techs.json (e.g. React) appears on the cube automatically.
+  const cubeFaces = Array.from({ length: 6 }, (_, i) => {
+    const t = technologies[i % technologies.length];
+    return { label: t.id.toUpperCase(), href: `/learn/${t.slug}` };
+  });
 
   return (
-    <div className="py-12 sm:py-16 md:py-20">
-      <Container size="default">
-        {/* Hero Section */}
-        <section className="text-center space-y-5 pb-12 sm:pb-16 border-b border-border">
-          <div className="inline-flex items-center gap-2.5 px-3 py-1.5 border border-border bg-card text-xs font-mono uppercase tracking-wider text-muted-foreground shadow-hard-xs">
-            <span className="w-5 h-5 flex items-center justify-center bg-[#fbfbfa] bg-logo border border-border/80 p-0.5">
-              <Image
-                src="/icons/logo.png"
-                alt="WebnD Logo"
-                width={16}
-                height={16}
-                className="w-full h-full object-contain"
-              />
-            </span>
-            <span>Search-first developer reference</span>
+    <>
+      {/* HERO — full-bleed yellow */}
+      <section className="zone-yellow dots hero-glow relative overflow-hidden border-b-2 border-border">
+        <Container size="default">
+          <div className="grid md:grid-cols-12 gap-12 items-center py-14 sm:py-20 md:py-28">
+            <div className="md:col-span-7 space-y-6">
+              <div className="rise inline-flex items-center gap-2.5 px-3 py-1.5 border-2 border-border bg-card text-xs font-mono uppercase tracking-wider shadow-hard-sm rounded-lg">
+                <span className="w-5 h-5 flex items-center justify-center bg-logo border border-border p-0.5">
+                  <Image
+                    src="/icons/logo.png"
+                    alt="WebnD Logo"
+                    width={16}
+                    height={16}
+                    className="w-full h-full object-contain"
+                  />
+                </span>
+                <span>Search-first developer reference</span>
+              </div>
+
+              <h1 className="rise d1 font-serif text-5xl sm:text-6xl md:text-7xl leading-[1.02] tracking-tight">
+                WebnD <span className="stamp">Inventory</span>
+              </h1>
+
+              <p className="rise d2 text-base sm:text-lg max-w-xl leading-relaxed font-medium">
+                Focused, self-contained concepts across web technologies. Search
+                for what you need, understand it in minutes, and move on.
+              </p>
+
+              <div className="rise d3 pt-2">
+                <HomeSearchTrigger />
+              </div>
+            </div>
+
+            {/* 3D cube — rotates on hover / drag, never on its own */}
+            <div className="rise d2 flex md:col-span-5 justify-center pt-4 md:pt-0">
+              <HeroCube faces={cubeFaces} />
+            </div>
           </div>
+        </Container>
+      </section>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-foreground tracking-tight leading-[1.08] max-w-3xl mx-auto font-normal">
-            WebnD Inventory
-          </h1>
+      {/* TICKER */}
+      <Ticker technologies={technologies} />
 
-          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Focused, self-contained concepts across web technologies.
-            Search for what you need, understand it in minutes, and move on.
-          </p>
+      {/* TECHNOLOGIES */}
+      <div className="py-12 sm:py-16">
+        <Container size="default">
+          <section className="space-y-8">
+            <div className="inventory-bar flex items-center justify-between px-4 py-2.5 border-2 border-border rounded-lg shadow-hard text-xs font-mono uppercase tracking-wider">
+              <span className="font-bold">Technology Inventory</span>
+              <span className="text-accent">
+                {technologies.length} technologies available
+              </span>
+            </div>
 
-          <div className="pt-4">
-            <HomeSearchTrigger />
-          </div>
-        </section>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+              {technologies.map((tech, i) => (
+                <div key={tech.id} className={`rise d${Math.min(i + 1, 4)}`}>
+                  <TechCard technology={tech} index={i} />
+                </div>
+              ))}
+            </div>
+          </section>
 
-        {/* Technology Exploration */}
-        <section className="pt-10 sm:pt-14 space-y-6">
-          <div className="flex items-center justify-between pb-2 border-b border-border text-xs font-mono uppercase tracking-wider text-muted-foreground">
-            <span className="font-semibold text-foreground">Technology Inventory</span>
-            <span>{technologies.length} technologies available</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {technologies.map((tech) => (
-              <TechCard key={tech.id} technology={tech} />
-            ))}
-          </div>
-        </section>
-
-        {/* Lightweight Recent / Popular Concepts */}
-        <RecentConcepts />
-      </Container>
-    </div>
+          <RecentConcepts />
+        </Container>
+      </div>
+    </>
   );
 }

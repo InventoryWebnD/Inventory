@@ -31,7 +31,7 @@ export default function TechHeader({
       {/* Technology Title, Icon, & Description */}
       <div className="flex items-start gap-4">
         {technology.icon && (
-          <div className="w-12 h-12 relative flex-shrink-0 flex items-center justify-center rounded-none bg-muted/40 p-2.5 border border-border shadow-hard-xs">
+          <div className="w-12 h-12 relative flex-shrink-0 flex items-center justify-center rounded-lg bg-muted/40 p-2.5 border border-border shadow-hard-xs">
             <Image
               src={technology.icon}
               alt={`${technology.title} logo`}
@@ -60,10 +60,10 @@ export default function TechHeader({
               key={cat}
               type="button"
               onClick={() => onSelectCategory(cat)}
-              className={`px-3 py-1.5 rounded-none text-xs font-mono uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                 selectedCategory === cat
                   ? "bg-foreground text-background border-foreground font-semibold shadow-hard-xs"
-                  : "bg-card border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 hover:bg-muted/40"
+                  : "bg-card border-border text-muted-foreground hover:text-foreground hover:border-accent/70 hover:bg-muted/40"
               }`}
             >
               {cat}
@@ -75,13 +75,13 @@ export default function TechHeader({
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex items-center justify-between sm:justify-start gap-3 px-3 py-1.5 rounded-none border border-border bg-card hover:bg-muted/60 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-all cursor-pointer w-full sm:w-auto shadow-hard-xs hover:shadow-hard active:translate-x-0.5 active:translate-y-0.5 active:shadow-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="flex items-center justify-between sm:justify-start gap-3 px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted/60 text-xs text-muted-foreground hover:text-foreground hover:border-accent/70 transition-all cursor-pointer w-full sm:w-auto shadow-hard-xs hover:shadow-hard active:translate-y-0.5 active:shadow-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <div className="flex items-center gap-2">
-            <Search className="w-3.5 h-3.5 text-accent" />
+            <Search className="w-3.5 h-3.5 text-accent-ink" />
             <span>Search {technology.title} concepts...</span>
           </div>
-          <kbd className="text-[10px] font-mono px-1.5 py-0.5 bg-muted rounded-none border border-border text-muted-foreground">
+          <kbd className="text-[10px] font-mono px-1.5 py-0.5 bg-muted rounded-lg border border-border text-muted-foreground">
             /
           </kbd>
         </button>

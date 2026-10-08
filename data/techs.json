@@ -19,5 +19,19 @@
     "slug": "js",
     "description": "Program dynamic interactivity, DOM events, asynchronous operations, and modern web logic.",
     "icon": "/icons/js.svg"
+  },
+  {
+    "id": "react",
+    "title": "React",
+    "slug": "react",
+    "description": "Build interactive user interfaces with components, props, state, hooks, routing, and full-stack data flow.",
+    "icon": "/icons/react.svg"
+  },
+  {
+    "id": "tailwind",
+    "title": "Tailwind CSS",
+    "slug": "tailwind",
+    "description": "Style fast with utility classes: responsive design, dark mode, animations, and custom themes with Tailwind CSS v4.",
+    "icon": "/icons/tailwind.svg"
   }
 ]

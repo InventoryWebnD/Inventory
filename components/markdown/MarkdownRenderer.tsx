@@ -42,7 +42,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <h2
                 id={id}
-                className="font-serif text-2xl sm:text-[26px] font-normal tracking-tight text-foreground mt-12 mb-4 scroll-mt-20 border-b border-border/60 pb-2"
+                className="font-serif text-[22px] sm:text-[26px] font-normal tracking-tight text-foreground mt-12 mb-4 scroll-mt-20 border-b border-border/60 pb-2"
               >
                 {children}
               </h2>
@@ -61,7 +61,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             );
           },
           p: ({ children }) => (
-            <p className="my-5 text-[17px] sm:text-[18px] text-foreground/90 leading-[1.75]">
+            <p className="my-5 text-[16px] sm:text-[18px] text-foreground/90 leading-[1.75]">
               {children}
             </p>
           ),
@@ -77,13 +77,13 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           ),
           li: ({ children }) => <li className="leading-[1.75] pl-1">{children}</li>,
           blockquote: ({ children }) => (
-            <blockquote className="my-7 border-l-4 border-accent pl-5 py-2.5 text-foreground/80 bg-muted/40 italic text-[17px] leading-relaxed rounded-none not-prose">
+            <blockquote className="my-7 border-l-4 border-accent pl-5 py-2.5 text-foreground/80 bg-muted/40 italic text-[17px] leading-relaxed rounded-lg not-prose">
               {children}
             </blockquote>
           ),
           table: ({ children }) => (
-            <div className="my-7 w-full overflow-x-auto rounded-none border border-border">
-              <table className="w-full text-left text-sm">{children}</table>
+            <div className="my-7 w-full overflow-x-auto rounded-lg border border-border shadow-hard-xs reveal">
+              <table className="w-full text-left text-xs sm:text-sm">{children}</table>
             </div>
           ),
           thead: ({ children }) => (
@@ -98,15 +98,15 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             <tr className="hover:bg-muted/30 transition-colors">{children}</tr>
           ),
           th: ({ children }) => (
-            <th className="px-4 py-3 font-semibold text-foreground">{children}</th>
+            <th className="px-3 sm:px-4 py-3 font-semibold text-foreground whitespace-nowrap">{children}</th>
           ),
           td: ({ children }) => (
-            <td className="px-4 py-3 text-foreground/90">{children}</td>
+            <td className="px-3 sm:px-4 py-3 text-foreground/90 align-top">{children}</td>
           ),
           a: ({ href, children }) => (
             <a
               href={href}
-              className="font-medium text-foreground underline decoration-accent underline-offset-4 hover:text-accent transition-colors"
+              className="font-medium text-foreground underline decoration-accent underline-offset-4 hover:text-accent-ink transition-colors"
               target={href?.startsWith("http") ? "_blank" : undefined}
               rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
             >
@@ -134,7 +134,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
             return (
               <code
-                className="px-1.5 py-0.5 rounded-none bg-muted/70 text-foreground font-mono text-[13.5px] border border-border"
+                className="px-1.5 py-0.5 rounded-lg bg-muted/70 text-foreground font-mono text-[13.5px] border border-border"
                 {...props}
               >
                 {children}

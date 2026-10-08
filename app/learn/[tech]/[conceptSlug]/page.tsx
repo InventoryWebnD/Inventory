@@ -102,11 +102,13 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
     articleSection: concept.category,
     inLanguage: "en-US",
     url: `${siteUrl}/learn/${techSlug}/${conceptSlug}`,
-    author: {
-      "@type": "Organization",
-      name: "Web & Design Society",
-      url: siteUrl,
-    },
+    author: concept.author
+      ? { "@type": "Person", name: concept.author }
+      : {
+          "@type": "Organization",
+          name: "Web & Design Society",
+          url: siteUrl,
+        },
     publisher: {
       "@type": "Organization",
       name: "Web & Design Society",
@@ -160,7 +162,7 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
                 <MarkdownRenderer content={markdownContent} />
               </div>
             ) : (
-              <div className="p-6 rounded-none border border-destructive/40 bg-destructive/5 text-destructive text-sm shadow-hard-xs">
+              <div className="p-6 rounded-lg border border-destructive/40 bg-destructive/5 text-destructive text-sm shadow-hard-xs">
                 <p className="font-semibold font-mono">Failed to load concept content</p>
                 <p className="text-xs text-muted-foreground mt-1 font-mono">
                   Could not find educational material at {concept.mdPath}.
@@ -170,30 +172,31 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
 
             {/* Concept Author Byline */}
             {concept.author && (
-              <div className="mt-12 p-4 sm:p-5 rounded-none border border-border bg-card shadow-hard-xs flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-none border border-border bg-muted flex items-center justify-center font-mono text-xs font-bold text-foreground">
+              <div className="author-card reveal mt-12 p-4 sm:p-5 rounded-xl border-2 border-border bg-card shadow-hard-sm flex flex-col min-[480px]:flex-row min-[480px]:items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="author-avatar" aria-hidden="true">
                     {concept.author
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </div>
-                  <div>
-                    <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
+                  <div className="min-w-0">
+                    <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-muted-foreground flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 bg-accent inline-block" />
-                      <span>Author</span>
+                      <span>Written by</span>
                     </div>
-                    <span className="text-sm sm:text-base font-semibold text-foreground">
+                    <span className="block font-serif text-xl sm:text-2xl text-foreground leading-tight">
                       {concept.author}
+                    </span>
+                    <span className="block text-xs text-muted-foreground mt-0.5">
+                      {technology.title} · {concept.estimatedTime ?? 5} min read
                     </span>
                   </div>
                 </div>
 
-                <div className="text-right hidden sm:block">
-                  <span className="text-xs font-mono text-muted-foreground border border-border px-2.5 py-1 bg-muted/40">
-                    WebnD Inventory
-                  </span>
-                </div>
+                <span className="self-start min-[480px]:self-auto text-xs font-mono text-muted-foreground border border-border px-2.5 py-1 bg-muted/40 rounded-md whitespace-nowrap">
+                  WebnD Inventory
+                </span>
               </div>
             )}
 

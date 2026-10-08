@@ -5,11 +5,18 @@ const docsDir = path.join(__dirname, "../docs/Contents");
 const publicContentDir = path.join(__dirname, "../public/content");
 const conceptsJsonPath = path.join(__dirname, "../data/concepts.json");
 
-const techMap = {
-  HTML: "html",
-  CSS: "css",
-  JS: "js",
-};
+// Built from data/techs.json so a new technology (e.g. React) only needs:
+//   1) an entry in data/techs.json   2) a folder docs/Contents/<ID> (any letter case)
+const techsJsonPath = path.join(__dirname, "../data/techs.json");
+const techMap = {};
+(function buildTechMap() {
+  const techs = JSON.parse(fs.readFileSync(techsJsonPath, "utf-8"));
+  const folders = fs.existsSync(docsDir) ? fs.readdirSync(docsDir) : [];
+  techs.forEach((t) => {
+    const folder = folders.find((f) => f.toLowerCase() === t.id.toLowerCase());
+    if (folder) techMap[folder] = t.slug;
+  });
+})();
 
 // Curated category maps
 const htmlCategories = {

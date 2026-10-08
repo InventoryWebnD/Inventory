@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Newsreader, Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/layout/BackToTop";
 import "./globals.css";
 
-const newsreader = Newsreader({
+const newsreader = Bricolage_Grotesque({
   variable: "--font-serif",
   subsets: ["latin"],
-  style: ["normal", "italic"],
 });
 
 const geistSans = Geist({
@@ -42,11 +42,14 @@ export const metadata: Metadata = {
     "developer cheat sheet",
     "flexbox",
     "CSS grid",
+    "Tailwind CSS",
+    "React",
     "DOM manipulation",
     "async javascript",
     "web standards",
   ],
   authors: [
+    { name: "Lakshya Bansal" },
     { name: "Web & Design Society", url: "https://github.com/InventoryWebnD" },
   ],
   creator: "Web & Design Society",
@@ -174,6 +177,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

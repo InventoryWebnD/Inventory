@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { createPortal } from "react-dom";
 import { Search, X, CornerDownLeft, Sparkles, Compass } from "lucide-react";
 import { searchConcepts } from "@/lib/search";
 import { SearchItem } from "@/types/search";
@@ -96,6 +97,19 @@ export default function SearchCommand({
     }
   };
 
+  // Close on Escape from anywhere (the panel's own onKeyDown only fires while focus is inside it)
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        handleClose();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [isOpen, handleClose]);
+
   // Scroll selected item into view
   useEffect(() => {
     if (!listRef.current) return;
@@ -105,23 +119,24 @@ export default function SearchCommand({
     }
   }, [selectedIndex]);
 
-  if (!isOpen) return null;
+  if (!isOpen || typeof document === "undefined") return null;
 
-  return (
+  // Render in a portal so no animated/transformed ancestor can trap the fixed overlay
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center pt-14 sm:pt-20 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in-0 duration-100"
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-14 sm:pt-20 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in-0 duration-100"
       onClick={handleClose}
     >
       <div
-        className="w-full max-w-xl bg-card border-2 border-foreground shadow-hard-lg rounded-none flex flex-col max-h-[82vh] overflow-hidden"
+        className="w-full max-w-xl bg-card border-2 border-foreground shadow-hard-lg rounded-lg flex flex-col max-h-[82vh] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
       >
         {/* Search Input Bar */}
         <div className="flex items-center px-4 py-3.5 border-b-2 border-border gap-3 bg-card">
-          <Search className="w-4 h-4 text-accent flex-shrink-0" />
+          <Search className="w-4 h-4 text-accent-ink flex-shrink-0" />
           {effectiveFilter && (
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-none bg-accent/15 text-foreground border border-accent">
+            <span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded-lg bg-accent/15 text-foreground border border-accent">
               <span>{effectiveFilter}</span>
               <button
                 type="button"
@@ -160,9 +175,16 @@ export default function SearchCommand({
               <X className="w-3.5 h-3.5" />
             </button>
           )}
-          <kbd className="hidden sm:inline-flex items-center text-[10px] font-mono text-muted-foreground bg-muted px-1.5 py-0.5 rounded-none border border-border">
-            ESC
-          </kbd>
+          <button
+            type="button"
+            onClick={handleClose}
+            aria-label="Close search"
+            title="Close (Esc)"
+            className="group/esc relative inline-flex h-6 min-w-[2.6rem] items-center justify-center rounded-lg border border-border bg-muted px-1.5 font-mono text-[10px] text-muted-foreground transition-all duration-200 cursor-pointer hover:border-destructive hover:bg-destructive hover:text-white hover:rotate-90 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <span className="transition-all duration-200 group-hover/esc:scale-0 group-hover/esc:opacity-0 max-sm:hidden">ESC</span>
+            <X className="absolute h-3.5 w-3.5 scale-0 opacity-0 transition-all duration-200 group-hover/esc:scale-100 group-hover/esc:opacity-100 max-sm:scale-100 max-sm:opacity-100" />
+          </button>
         </div>
 
         {/* Results List or Empty Suggestions */}
@@ -183,7 +205,7 @@ export default function SearchCommand({
           ) : (
             <div className="py-8 px-4 text-center space-y-4">
               <div className="text-muted-foreground text-sm">
-                <Sparkles className="w-5 h-5 mx-auto mb-2 text-accent" />
+                <Sparkles className="w-5 h-5 mx-auto mb-2 text-accent-ink" />
                 <p className="font-semibold text-foreground font-sans">No concepts found</p>
                 <p className="text-xs text-muted-foreground mt-1">
                   {query
@@ -194,7 +216,7 @@ export default function SearchCommand({
 
               <div className="pt-3 border-t border-border max-w-sm mx-auto">
                 <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground mb-2.5">
-                  <Compass className="w-3.5 h-3.5 text-accent" />
+                  <Compass className="w-3.5 h-3.5 text-accent-ink" />
                   <span>Popular searches:</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-1.5">
@@ -203,7 +225,7 @@ export default function SearchCommand({
                       key={sug}
                       type="button"
                       onClick={() => setQuery(sug)}
-                      className="px-2.5 py-1 rounded-none bg-card hover:bg-muted text-xs font-mono text-muted-foreground hover:text-foreground border border-border hover:border-foreground/30 transition-colors cursor-pointer"
+                      className="px-2.5 py-1 rounded-lg bg-card hover:bg-muted text-xs font-mono text-muted-foreground hover:text-foreground border border-border hover:border-foreground/30 transition-colors cursor-pointer"
                     >
                       {sug}
                     </button>
@@ -230,16 +252,16 @@ export default function SearchCommand({
               <span className="hidden sm:inline text-xs">WebnD</span>
             </div>
             <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 rounded-none bg-card border border-border text-[10px]">
+              <kbd className="px-1.5 py-0.5 rounded-lg bg-card border border-border text-[10px]">
                 ↑
               </kbd>
-              <kbd className="px-1.5 py-0.5 rounded-none bg-card border border-border text-[10px]">
+              <kbd className="px-1.5 py-0.5 rounded-lg bg-card border border-border text-[10px]">
                 ↓
               </kbd>{" "}
               navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 rounded-none bg-card border border-border text-[10px]">
+              <kbd className="px-1.5 py-0.5 rounded-lg bg-card border border-border text-[10px]">
                 <CornerDownLeft className="w-2.5 h-2.5 inline" />
               </kbd>{" "}
               select
@@ -250,6 +272,7 @@ export default function SearchCommand({
           </span>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -7,7 +7,7 @@ export default function Footer() {
   const technologies = getTechnologies();
 
   return (
-    <footer className="border-t border-border bg-card/40 mt-auto transition-colors">
+    <footer className="border-t-2 border-border zone-yellow mt-auto transition-colors">
       <Container size="wide">
         <div className="py-12 sm:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Brand & Mission */}
@@ -16,7 +16,7 @@ export default function Footer() {
               href="/"
               className="inline-flex items-center gap-2.5 font-bold text-foreground tracking-tight hover:opacity-90 transition-opacity group"
             >
-              <div className="relative w-8 h-8 flex items-center justify-center rounded-none border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs group-hover:border-foreground/40 transition-all p-1">
+              <div className="relative w-8 h-8 flex items-center justify-center rounded-lg border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs group-hover:border-accent/70 transition-all p-1">
                 <Image
                   src="/icons/logo.png"
                   alt="WebnD Logo"
@@ -78,9 +78,9 @@ export default function Footer() {
                 <Link
                   key={tech.id}
                   href={`/learn/${tech.id}`}
-                  className="hover:text-foreground transition-colors flex items-center gap-1.5 group"
+                  className="hover:text-foreground hover:translate-x-1 transition-all flex items-center gap-1.5 group"
                 >
-                  <span className="w-1.5 h-1.5 bg-accent/60 group-hover:bg-accent transition-colors" />
+                  <span className="w-1.5 h-1.5 bg-accent/60 group-hover:bg-accent group-hover:rotate-45 group-hover:scale-125 transition-all" />
                   <span>{tech.title}</span>
                 </Link>
               ))}
@@ -89,11 +89,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="py-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
+        <div className="py-6 border-t-2 border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()} WebnD. All rights reserved.
           </p>
-          <p className="flex items-center gap-2">
+          <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
+            <span>Lessons by <span className="font-semibold text-foreground">Lakshya Bansal</span></span>
+            <span aria-hidden="true">·</span>
             <span>Built with Next.js &amp; Tailwind CSS</span>
           </p>
         </div>

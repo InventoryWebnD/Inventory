@@ -55,7 +55,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
         <button
           type="button"
           onClick={() => setIsOpenMobile((prev) => !prev)}
-          className="w-full flex items-center justify-between p-3 rounded-none border border-border bg-card text-xs font-mono font-medium text-foreground cursor-pointer shadow-hard-xs hover:shadow-hard active:translate-x-0.5 active:translate-y-0.5 transition-all"
+          className="w-full flex items-center justify-between p-3 rounded-lg border border-border bg-card text-xs font-mono font-medium text-foreground cursor-pointer shadow-hard-xs hover:shadow-hard active:translate-y-0.5 transition-all"
         >
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-accent inline-block" />
@@ -69,7 +69,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
         </button>
 
         {isOpenMobile && (
-          <div className="mt-1.5 p-3 border border-border rounded-none bg-card space-y-1.5 text-xs font-mono shadow-hard-xs">
+          <div className="mt-1.5 p-3 border border-border rounded-lg bg-card space-y-1.5 text-xs font-mono shadow-hard-xs max-h-72 overflow-y-auto animate-in fade-in-0 slide-in-from-top-2 duration-200">
             {headings.map((heading) => (
               <button
                 key={heading.id}
@@ -93,7 +93,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       {/* Desktop sticky sidebar */}
       <div className="hidden lg:block">
         <div className="flex items-center gap-2 pb-2 mb-3 border-b border-border/60">
-          <AlignLeft className="w-3.5 h-3.5 text-accent" />
+          <AlignLeft className="w-3.5 h-3.5 text-accent-ink" />
           <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground">
             On this page
           </h4>

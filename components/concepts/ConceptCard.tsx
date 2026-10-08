@@ -1,21 +1,24 @@
 import Link from "next/link";
 import { Concept } from "@/types/content";
 import { ArrowRight } from "lucide-react";
+import type { CSSProperties } from "react";
 
 interface ConceptCardProps {
   concept: Concept;
+  index?: number;
 }
 
-export default function ConceptCard({ concept }: ConceptCardProps) {
+export default function ConceptCard({ concept, index = 0 }: ConceptCardProps) {
   return (
     <Link
       href={`/learn/${concept.tech}/${concept.slug}`}
-      className="group block rounded-none border border-border bg-card p-5 transition-all duration-150 hover:border-foreground/80 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer"
+      style={{ "--i": Math.min(index, 12) } as CSSProperties}
+      className="rise-stagger group block rounded-lg border border-border bg-card p-5 card-3d hover:shadow-hard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer"
     >
       <div className="flex flex-col justify-between h-full space-y-4">
         <div className="space-y-2">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-bold tracking-tight text-foreground group-hover:text-accent transition-colors leading-snug">
+            <h3 className="text-base font-bold tracking-tight text-foreground group-hover:text-accent-ink transition-colors leading-snug">
               {concept.title}
             </h3>
             {concept.estimatedTime && (
@@ -42,7 +45,7 @@ export default function ConceptCard({ concept }: ConceptCardProps) {
             ))}
           </div>
 
-          <div className="flex items-center text-xs font-semibold text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+          <div className="flex items-center text-xs font-semibold text-muted-foreground group-hover:text-accent-ink group-hover:translate-x-0.5 transition-transform flex-shrink-0">
             <span>Read</span>
             <ArrowRight className="w-3.5 h-3.5 ml-1" />
           </div>

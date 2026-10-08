@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center px-4 py-16 text-center">
       <div className="max-w-md mx-auto space-y-6">
-        <div className="w-16 h-16 rounded-none border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs flex items-center justify-center mx-auto p-2">
+        <div className="w-16 h-16 rounded-lg border border-border bg-[#fbfbfa] bg-logo shadow-hard-xs flex items-center justify-center mx-auto p-2">
           <Image
             src="/icons/logo.png"
             alt="WebnD Logo"
