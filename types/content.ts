@@ -19,4 +19,6 @@ export interface Concept {
   category?: string;
   estimatedTime?: number;
   author?: string;
+  /** Optional ISO date (YYYY-MM-DD). Used for sitemap lastModified and JSON-LD dateModified when set. */
+  updatedAt?: string;
 }

@@ -89,3 +89,47 @@ Adding a new concept requires **zero React component modifications**:
 
 - Visited concepts are stored locally in the browser's `localStorage` (client-side only, no account or server persistence required).
 - Displays your last 6 recently visited concepts on `/learn` for immediate jump-back access.
+
+## SEO Setup
+
+All SEO configuration lives in `lib/seo.ts`; pages call `buildPageMetadata()` so titles, canonicals, Open Graph and Twitter cards stay consistent.
+
+| Concern | Where |
+| --- | --- |
+| Production origin, site name, default OG image | `lib/seo.ts` |
+| Title template, site-wide Organization + WebSite JSON-LD | `app/layout.tsx` |
+| Per-page metadata + canonical | `generateMetadata()` in `app/learn/[tech]/**/page.tsx`, `metadata` in `app/page.tsx` and `app/learn/page.tsx` |
+| Page JSON-LD (TechArticle, CollectionPage, BreadcrumbList) | `app/learn/[tech]/page.tsx`, `app/learn/[tech]/[conceptSlug]/page.tsx` |
+| `/robots.txt`, `/sitemap.xml` | `app/robots.ts`, `app/sitemap.ts` (generated from `data/*.json`) |
+| `noindex` for raw Markdown under `/content/*` | `next.config.ts` (`X-Robots-Tag`) |
+
+### Environment variable
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://inventory.webnd.org   # no trailing slash
+```
+
+Set it in your hosting provider for production. If unset, `https://inventory.webnd.org` (the value that was already in the code) is used. It must be set at **build** time because it is a `NEXT_PUBLIC_` variable.
+
+### Adding content
+
+Adding a concept to `data/concepts.json` automatically adds it to the sitemap, static params, metadata and JSON-LD. Optionally set `"updatedAt": "YYYY-MM-DD"` on a concept to emit a real `lastmod` and `dateModified`; without it, no date is published.
+
+### Validate after deploying
+
+```bash
+npm install && npm run validate:content && npm run lint && npm run build
+curl -s https://<your-domain>/robots.txt
+curl -s https://<your-domain>/sitemap.xml | head
+curl -sI https://<your-domain>/content/css/flexbox.md | grep -i x-robots-tag   # noindex
+curl -s -o /dev/null -w "%{http_code}\n" https://<your-domain>/learn/css/not-a-real-slug   # 404
+```
+
+Then check a concept page in Google's Rich Results Test and the Schema Markup Validator, and verify `<link rel="canonical">` matches the page URL.
+
+### Search Console / Bing
+
+1. Add the domain as a property in Google Search Console and verify it (DNS TXT record recommended).
+2. Submit `https://<your-domain>/sitemap.xml` under Sitemaps.
+3. Use URL Inspection on `/`, `/learn`, one tech page and one concept page, then Request Indexing.
+4. Import the site into Bing Webmaster Tools from Search Console, or add and verify it manually, then submit the same sitemap.

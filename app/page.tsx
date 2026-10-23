@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { getTechnologies } from "@/lib/content";
 import Container from "@/components/layout/Container";
@@ -7,6 +8,20 @@ import HomeSearchTrigger from "@/components/search/HomeSearchTrigger";
 
 import HeroCube from "@/components/home/HeroCube";
 import Ticker from "@/components/home/Ticker";
+import { buildPageMetadata, DEFAULT_TITLE, DEFAULT_DESCRIPTION } from "@/lib/seo";
+
+const homeMetadata = buildPageMetadata({
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  path: "/",
+});
+
+export const metadata: Metadata = {
+  ...homeMetadata,
+  title: { absolute: DEFAULT_TITLE },
+  openGraph: { ...homeMetadata.openGraph, title: DEFAULT_TITLE },
+  twitter: { ...homeMetadata.twitter, title: DEFAULT_TITLE },
+};
 
 export default function HomePage() {
   const technologies = getTechnologies();

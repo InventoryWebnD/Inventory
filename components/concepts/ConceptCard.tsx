@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Concept } from "@/types/content";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/components/ui/icons";
 import type { CSSProperties } from "react";
 
 interface ConceptCardProps {

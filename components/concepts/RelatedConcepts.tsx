@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Concept } from "@/types/content";
-import { ArrowRight, Compass } from "lucide-react";
+import { ArrowRight, Compass } from "@/components/ui/icons";
 
 interface RelatedConceptsProps {
   concepts: Concept[];
