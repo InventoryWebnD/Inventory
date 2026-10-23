@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Technology } from "@/types/content";
 import ConceptBreadcrumbs from "@/components/concepts/ConceptBreadcrumbs";
-import { Search } from "lucide-react";
+import { Search } from "@/components/ui/icons";
 
 interface TechHeaderProps {
   technology: Technology;

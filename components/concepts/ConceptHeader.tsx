@@ -1,5 +1,5 @@
 import { Concept, Technology } from "@/types/content";
-import { Clock } from "lucide-react";
+import { Clock } from "@/components/ui/icons";
 
 interface ConceptHeaderProps {
   concept: Concept;

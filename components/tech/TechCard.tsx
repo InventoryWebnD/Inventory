@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Technology } from "@/types/content";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/components/ui/icons";
 import { getConceptsByTechnology } from "@/lib/content";
 
 interface TechCardProps {

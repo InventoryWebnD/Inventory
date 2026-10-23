@@ -3,6 +3,16 @@ import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/layout/BackToTop";
+import {
+  SITE_URL,
+  SITE_NAME,
+  ORG_NAME,
+  DEFAULT_TITLE,
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  absoluteUrl,
+} from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const newsreader = Bricolage_Grotesque({
@@ -20,17 +30,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://inventory.webnd.org";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "WebnD Inventory — Search-First Web Development Reference",
-    template: "%s | WebnD Inventory",
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "A search-first, concept-based web development learning platform. Focused, self-contained concepts across HTML, CSS, JavaScript, and more.",
-  applicationName: "WebnD Inventory",
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
     "WebnD",
     "WebnD Inventory",
@@ -59,32 +66,19 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    title: "WebnD Inventory — Search-First Web Development Reference",
-    description:
-      "A search-first, concept-based web development learning platform. Focused, self-contained concepts across HTML, CSS, JavaScript, and more.",
-    url: siteUrl,
-    siteName: "WebnD Inventory",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/icons/logo.png",
-        width: 1200,
-        height: 1200,
-        alt: "WebnD Logo",
-      },
-    ],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary",
-    title: "WebnD Inventory — Search-First Web Development Reference",
-    description:
-      "A search-first, concept-based web development learning platform.",
-    images: ["/icons/logo.png"],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.url],
     creator: "@webnd",
   },
   robots: {
@@ -107,6 +101,9 @@ export const metadata: Metadata = {
     shortcut: "/icons/logo.png",
     apple: "/apple-icon.png",
   },
+  verification: {
+    google: "bMbTAr6sLATBqNuGJeJXk6P2L_S1oKkrY91ynp8L_x4",
+  },
   category: "technology",
 };
 
@@ -120,28 +117,21 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
-        url: siteUrl,
-        name: "WebnD Inventory",
-        description:
-          "A search-first, concept-based web development learning platform.",
-        publisher: {
-          "@id": `${siteUrl}/#organization`,
-        },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${siteUrl}/learn?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
+        "@id": `${SITE_URL}/#website`,
+        url: absoluteUrl("/"),
+        name: SITE_NAME,
+        description: DEFAULT_DESCRIPTION,
+        inLanguage: "en-US",
+        publisher: { "@id": `${SITE_URL}/#organization` },
       },
       {
         "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Web & Design Society",
-        url: siteUrl,
+        "@id": `${SITE_URL}/#organization`,
+        name: ORG_NAME,
+        url: absoluteUrl("/"),
         logo: {
           "@type": "ImageObject",
-          url: `${siteUrl}/icons/logo.png`,
+          url: absoluteUrl("/icons/logo.png"),
         },
       },
     ],
@@ -154,10 +144,7 @@ export default function RootLayout({
       className={`dark ${newsreader.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -1,10 +1,20 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
+  getConcepts,
   getTechnologyBySlug,
   getConceptBySlug,
   getRelatedConcepts,
 } from "@/lib/content";
+import {
+  SITE_URL,
+  NOT_FOUND_METADATA,
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildPageMetadata,
+  metaDescription,
+} from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
 import { getMarkdownContent, extractHeadings } from "@/lib/markdown";
 import Container from "@/components/layout/Container";
 import ConceptBreadcrumbs from "@/components/concepts/ConceptBreadcrumbs";
@@ -15,6 +25,15 @@ import RelatedConcepts from "@/components/concepts/RelatedConcepts";
 import ConceptFooterNav from "@/components/concepts/ConceptFooterNav";
 import ReadingProgress from "@/components/markdown/ReadingProgress";
 import RecentTracker from "@/components/concepts/RecentTracker";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getConcepts().map((concept) => ({
+    tech: concept.tech,
+    conceptSlug: concept.slug,
+  }));
+}
 
 interface ConceptPageProps {
   params: Promise<{
@@ -31,18 +50,14 @@ export async function generateMetadata({
   const technology = getTechnologyBySlug(techSlug);
 
   if (!concept || !technology) {
-    return {
-      title: "Concept Not Found",
-    };
+    return NOT_FOUND_METADATA;
   }
 
-  const title = `${concept.title} (${technology.title})`;
-  const description = concept.summary;
-  const url = `/learn/${techSlug}/${conceptSlug}`;
-
-  return {
-    title,
-    description,
+  return buildPageMetadata({
+    title: `${concept.title} (${technology.title})`,
+    description: metaDescription(concept.summary),
+    path: `/learn/${technology.slug}/${concept.slug}`,
+    type: "article",
     keywords: [
       concept.title,
       technology.title,
@@ -53,27 +68,7 @@ export async function generateMetadata({
       `${technology.title} documentation`,
       "web development",
     ],
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      title: `${title} | WebnD Inventory`,
-      description,
-      url,
-      type: "article",
-      images: [
-        {
-          url: technology.icon || "/icons/logo.png",
-          alt: `${concept.title} - ${technology.title}`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary",
-      title: `${title} | WebnD Inventory`,
-      description,
-    },
-  };
+  });
 }
 
 export default async function ConceptPage({ params }: ConceptPageProps) {
@@ -93,38 +88,47 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
   const headings = extractHeadings(markdownContent);
   const relatedConcepts = getRelatedConcepts(concept);
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://inventory.webnd.org";
+  const pagePath = `/learn/${technology.slug}/${concept.slug}`;
+  const modified =
+    concept.updatedAt && !Number.isNaN(new Date(concept.updatedAt).getTime())
+      ? concept.updatedAt
+      : undefined;
+
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    headline: concept.title,
-    description: concept.summary,
-    articleSection: concept.category,
-    inLanguage: "en-US",
-    url: `${siteUrl}/learn/${techSlug}/${conceptSlug}`,
-    author: concept.author
-      ? { "@type": "Person", name: concept.author }
-      : {
-          "@type": "Organization",
-          name: "Web & Design Society",
-          url: siteUrl,
-        },
-    publisher: {
-      "@type": "Organization",
-      name: "Web & Design Society",
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/icons/logo.png`,
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": `${absoluteUrl(pagePath)}#article`,
+        mainEntityOfPage: absoluteUrl(pagePath),
+        url: absoluteUrl(pagePath),
+        headline: concept.title,
+        description: concept.summary,
+        articleSection: concept.category,
+        about: technology.title,
+        inLanguage: "en-US",
+        ...(concept.estimatedTime
+          ? { timeRequired: `PT${concept.estimatedTime}M` }
+          : {}),
+        ...(modified ? { dateModified: modified } : {}),
+        author: concept.author
+          ? { "@type": "Person", name: concept.author }
+          : { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        isPartOf: { "@id": `${SITE_URL}/#website` },
       },
-    },
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Learn", path: "/learn" },
+        { name: technology.title, path: `/learn/${technology.slug}` },
+        { name: concept.title, path: pagePath },
+      ]),
+    ],
   };
 
   return (
     <div className="py-8 sm:py-10">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      <JsonLd data={articleJsonLd} />
       {/* Scroll Reading Progress Bar */}
       <ReadingProgress />
 
