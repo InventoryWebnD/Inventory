@@ -14,6 +14,8 @@ const homeMetadata = buildPageMetadata({
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
   path: "/",
+    keywords: ["WebnD Inventory", "web technologies", "developer reference"],
+
 });
 
 export const metadata: Metadata = {
