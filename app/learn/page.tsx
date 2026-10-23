@@ -5,28 +5,14 @@ import Container from "@/components/layout/Container";
 import TechCard from "@/components/tech/TechCard";
 import RecentConcepts from "@/components/concepts/RecentConcepts";
 import LearnSearchTrigger from "./LearnSearchTrigger";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Technologies Library",
   description:
     "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
-  alternates: {
-    canonical: "/learn",
-  },
-  openGraph: {
-    title: "Technologies Library | WebnD Inventory",
-    description:
-      "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
-    url: "/learn",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Technologies Library | WebnD Inventory",
-    description:
-      "Explore web technologies and browse focused, self-contained educational concepts across HTML, CSS, JavaScript, and more.",
-  },
-};
+  path: "/learn",
+});
 
 export default function LearnPage() {
   const technologies = getTechnologies();
